@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6316471507028072144}
   - component: {fileID: 6380325620868671259}
   m_Layer: 0
-  m_Name: Mummy
+  m_Name: Mummy-m
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
