@@ -6,6 +6,8 @@ public class TowerManager : MonoBehaviour
 {
     public GameObject towerPrefab;
     public Grid grid;
+
+    public AudioClip SFX;
     public void CreateTower(Cell cellToPlaceIn)
     {
         Debug.Log("Create tower");
@@ -17,5 +19,7 @@ public class TowerManager : MonoBehaviour
         Tower towerComponent = newTower.GetComponent<Tower>();
 
         towerComponent.SetCell(cellToPlaceIn);
+
+        AudioSource.PlayClipAtPoint(SFX, transform.position);
     }
 }

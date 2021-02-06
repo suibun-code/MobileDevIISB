@@ -11,6 +11,8 @@ public class OnEnemyDestroy : MonoBehaviour
     GameObject player;
     PlayerScript ps;
 
+    public AudioClip SFX;
+
 
     private void Start()
     {
@@ -27,5 +29,8 @@ public class OnEnemyDestroy : MonoBehaviour
         ps.GainResource_Gold(10);
         // ps.GainResource_Diamond(-10);
         // ps.GainResource_Bricks(10);
+
+       
+        AudioSource.PlayClipAtPoint(SFX, transform.position);
     }
 }
