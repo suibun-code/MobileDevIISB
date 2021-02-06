@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3160459230518513855}
   - component: {fileID: 2249854864815158136}
   m_Layer: 0
-  m_Name: Swordsmen
+  m_Name: Swordsmen-m
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
