@@ -38,7 +38,7 @@ public class Grid : MonoBehaviour
                 int offset = (j % 2 != 0) ? 0 : 1;
                 int finalX = i + offset;
 
-                allCells[finalX, j].GetComponent<SpriteRenderer>().color = new Color32(0, 0, 255, 30);
+                allCells[finalX, j].GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 30);
             }
     }
 }
