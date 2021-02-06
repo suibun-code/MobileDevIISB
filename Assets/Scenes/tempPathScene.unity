@@ -161,7 +161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -265, y: 219}
+  m_AnchoredPosition: {x: -265, y: 109}
   m_SizeDelta: {x: 200, y: 116}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &218954784
@@ -1060,7 +1060,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325692060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1610001592}
@@ -1069,7 +1069,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 273, y: 215}
+  m_AnchoredPosition: {x: 273, y: 104.999985}
   m_SizeDelta: {x: 160, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1325692062
@@ -1436,6 +1436,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 770383744431537308, guid: 4eb36372dc94e0d4b9b3e45ebf005e30, type: 3}
+      propertyPath: GoldCountUI
+      value: 
+      objectReference: {fileID: 1621926814}
+    - target: {fileID: 770383744431537308, guid: 4eb36372dc94e0d4b9b3e45ebf005e30, type: 3}
+      propertyPath: BricksCountUI
+      value: 
+      objectReference: {fileID: 396122593}
+    - target: {fileID: 770383744431537308, guid: 4eb36372dc94e0d4b9b3e45ebf005e30, type: 3}
+      propertyPath: DiamondCountUI
+      value: 
+      objectReference: {fileID: 1854229781}
     - target: {fileID: 2548242241821840053, guid: 4eb36372dc94e0d4b9b3e45ebf005e30, type: 3}
       propertyPath: m_ReceiveShadows
       value: 1
