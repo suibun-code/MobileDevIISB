@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 5424123895397131192}
   - component: {fileID: 5424123895397131193}
   - component: {fileID: 5424123895397131198}
-  - component: {fileID: 5424123895397131199}
+  - component: {fileID: 4627358845535536108}
+  - component: {fileID: 6862684342565763099}
   m_Layer: 0
   m_Name: SniperTower
   m_TagString: Untagged
@@ -83,8 +84,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &5424123895397131199
-SphereCollider:
+--- !u!114 &4627358845535536108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5424123895397131196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e0f6c6de28b84c4aa1970f3c93d3adb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCell: {fileID: 0}
+--- !u!65 &6862684342565763099
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,8 +108,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.5
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Size: {x: 0.795, y: 2, z: 0.75}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &5424123894169208082
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Cell : MonoBehaviour
 {
+    public TowerManager towerManager;
+
     public SpriteRenderer spriteRenderer;
+    public Tower currentTower = null;
     public Vector2Int gridPosition = Vector2Int.zero;
     public Grid grid = null;
     public RectTransform rectTransform = null;
@@ -15,6 +18,11 @@ public class Cell : MonoBehaviour
         grid = newGrid;
 
         rectTransform = GetComponent<RectTransform>();
+    }
+
+    void OnMouseDown()
+    {
+        towerManager.CreateTower(this);
     }
 
     public void Remove()

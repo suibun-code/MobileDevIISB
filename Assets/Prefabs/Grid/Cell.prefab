@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4183107822502881553}
   - component: {fileID: 4183107822502881558}
   - component: {fileID: -7892971276951499616}
+  - component: {fileID: 5089365609436160771}
   m_Layer: 0
   m_Name: Cell
   m_TagString: Untagged
@@ -100,7 +101,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0eb26f2de689e4290986f726ed437f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerManager: {fileID: 3610863664728857826, guid: 5744ce538b9344c46b5fda12032ecc14, type: 3}
   spriteRenderer: {fileID: 0}
+  currentTower: {fileID: 0}
   gridPosition: {x: 0, y: 0}
   grid: {fileID: 0}
   rectTransform: {fileID: 0}
+--- !u!65 &5089365609436160771
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4183107822502881559}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.1, z: 0.001}
+  m_Center: {x: 0, y: 0, z: 0}
