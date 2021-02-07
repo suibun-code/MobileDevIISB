@@ -25,7 +25,12 @@ public class PlayerScript : MonoBehaviour
     //public Text GoldCountUI;
     //public Text BricksCountUI;
 
-
+    //Audio
+    [Header("Audio")]
+    public AudioClip SpendCurrencySFX;
+    public AudioClip UpgradeTowerSFX;
+    public AudioClip DestroyedSFX;
+    
 
     void Start()
     {
@@ -86,12 +91,16 @@ public class PlayerScript : MonoBehaviour
     {
         if (Health > 0)
         {
+            //audio
+            AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
             Health -= damage;
             HealthBar.transform.localScale = new Vector3(
                 HealthBar.transform.localScale.x,
                 HealthBar.transform.localScale.y,
                 0.2f * (Health / 100)
-            );
+
+                
+            ) ;
 
 
 

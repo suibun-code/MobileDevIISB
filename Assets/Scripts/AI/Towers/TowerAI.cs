@@ -16,6 +16,14 @@ public class TowerAI : MonoBehaviour
 
     public bool showRange;
     private float timer;
+
+    //Audio
+    [Header("Audio")]
+    public AudioClip ShootingMagicSFX;
+    public AudioClip ShootingArrowSFX;
+    public AudioClip MeleeSwordSwingSFX;
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +47,8 @@ public class TowerAI : MonoBehaviour
             {
                 timer = 0;
                 Shoot();
+
+                
             }
         }
     }
@@ -71,6 +81,10 @@ public class TowerAI : MonoBehaviour
     private void Shoot()
     {
         Debug.Log("shot");
+
+        //audio
+        AudioSource.PlayClipAtPoint(ShootingArrowSFX, transform.position);
+        AudioSource.PlayClipAtPoint(ShootingMagicSFX, transform.position);
     }
 
     private void OnDrawGizmos()

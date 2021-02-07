@@ -11,8 +11,13 @@ public class OnEnemyDestroy : MonoBehaviour
     GameObject player;
     PlayerScript ps;
 
-    public AudioClip SFX;
-
+    //Audio
+    [Header("Audio")]
+    public AudioClip DestroyedSFX;
+    public AudioClip EnemyHitWithArrowSFX;
+    public AudioClip EnemyHitWithMagicSFX;
+    public AudioClip EnemyHitWithPunchSFX;
+    public AudioClip EnemyHitWithSwordSFX;
 
     private void Start()
     {
@@ -31,6 +36,6 @@ public class OnEnemyDestroy : MonoBehaviour
         // ps.GainResource_Bricks(10);
 
        
-        AudioSource.PlayClipAtPoint(SFX, transform.position);
+        AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
     }
 }
