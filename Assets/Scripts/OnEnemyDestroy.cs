@@ -26,7 +26,7 @@ public class OnEnemyDestroy : MonoBehaviour
     private void OnDestroy()
     {
         // when enemy gets destroyed, add resource to player script
-        ps.GainResource_Gold(10);
+        // ps.GainResource_Gold(10);
         // ps.GainResource_Diamond(-10);
         // ps.GainResource_Bricks(10);
 
