@@ -45,19 +45,24 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         
-
     }
 
 
 
     void OnCollisionEnter(Collision other)
     {
-
+        if (other.gameObject.tag == "Enemy")
+        {
+            Destroy(other.gameObject);
+            TakeDamage(20.0f);
+            print("Take 10 damage");
+        }
+        
     }
 
     private void OnCollisionStay(Collision other)
     {
-        
+
     }
 
 
@@ -91,16 +96,18 @@ public class PlayerScript : MonoBehaviour
     {
         if (Health > 0)
         {
+            print("Take damage");
+
             //audio
-            AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
+            // AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
+
+
             Health -= damage;
             HealthBar.transform.localScale = new Vector3(
                 HealthBar.transform.localScale.x,
                 HealthBar.transform.localScale.y,
                 0.2f * (Health / 100)
-
-                
-            ) ;
+            );
 
 
 
