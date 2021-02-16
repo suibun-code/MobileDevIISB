@@ -13,7 +13,9 @@ public class ResourceInventorySystem : MonoBehaviour
     public Text diamondCtr;
 
     // int counter for the 3 resources
-    int bricks, gold, diamond;
+    public static int bricks, gold, diamond;
+
+    Cell cellSpt;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,8 @@ public class ResourceInventorySystem : MonoBehaviour
         bricks = 0;
         gold = 0;
         diamond = 0;
+
+        cellSpt = GetComponent<Cell>();
     }
 
     // Update is called once per frame

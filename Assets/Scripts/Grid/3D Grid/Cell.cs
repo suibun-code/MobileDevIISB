@@ -12,6 +12,7 @@ public class Cell : MonoBehaviour
     public Grid grid = null;
     public RectTransform rectTransform = null;
 
+
     public void Setup(Vector2Int newGridPosition, Grid newGrid)
     {
         gridPosition = newGridPosition;
@@ -20,7 +21,7 @@ public class Cell : MonoBehaviour
         rectTransform = GetComponent<RectTransform>();
     }
 
-    void OnMouseDown()
+    public void OnMouseDown()
     {
         towerManager.CreateTower(this);
     }

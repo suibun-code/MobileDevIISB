@@ -36,6 +36,6 @@ public class OnEnemyDestroy : MonoBehaviour
         // ps.GainResource_Bricks(10);
 
        
-        AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
+        //AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
     }
 }

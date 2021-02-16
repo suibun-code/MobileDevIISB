@@ -80,11 +80,11 @@ public class TowerAI : MonoBehaviour
 
     private void Shoot()
     {
-        // Debug.Log("shot");
+        Debug.Log("shot");
 
         //audio
-        AudioSource.PlayClipAtPoint(ShootingArrowSFX, transform.position);
-        AudioSource.PlayClipAtPoint(ShootingMagicSFX, transform.position);
+        //AudioSource.PlayClipAtPoint(ShootingArrowSFX, transform.position);
+        //AudioSource.PlayClipAtPoint(ShootingMagicSFX, transform.position);
     }
 
     private void OnDrawGizmos()
