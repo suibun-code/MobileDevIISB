@@ -15,6 +15,7 @@ public class LoadingUI : MonoBehaviour
 
     void Start()
     {
+        loadingBar.fillAmount = 0.0f;
         StartCoroutine(LoadAsynSceneCoroutine());
     }
 
@@ -29,9 +30,9 @@ public class LoadingUI : MonoBehaviour
         while (!operation.isDone)
         {
 
-            time = +Time.time;
+            time += Time.deltaTime;
 
-            loadingBar.fillAmount = time / 5f;
+            loadingBar.fillAmount = time / 3f;
 
             if (time > 5)
             {
