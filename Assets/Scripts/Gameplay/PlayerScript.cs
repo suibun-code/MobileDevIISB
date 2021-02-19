@@ -9,15 +9,15 @@ public class PlayerScript : MonoBehaviour
 
 
     // Parameters
-    public float Health;
+    float Health;
     //public int DiamondResourcesCount;
     //public int GoldResourcesCount;
     //public int BricksResourcesCount;
 
 
     // Health bar object
-    public GameObject HealthBar;
-
+    public GameObject HealthBarContainer;
+    public GameObject HealthBarIndicator;
 
 
     // Text UI references
@@ -35,6 +35,8 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         Health = 100;
+        HealthBarIndicator.GetComponent<TextMesh>().text = Health.ToString();
+
         //DiamondResourcesCount = 0;
         //GoldResourcesCount = 0;
         //BricksResourcesCount = 0;
@@ -103,12 +105,12 @@ public class PlayerScript : MonoBehaviour
 
 
             Health -= damage;
-            HealthBar.transform.localScale = new Vector3(
-                HealthBar.transform.localScale.x,
-                HealthBar.transform.localScale.y,
-                0.2f * (Health / 100)
+            HealthBarContainer.transform.localScale = new Vector3(
+                HealthBarContainer.transform.localScale.x,
+                HealthBarContainer.transform.localScale.y,
+                1f * (Health / 100f)
             );
-
+            HealthBarIndicator.GetComponent<TextMesh>().text = Health.ToString();
 
 
         }
