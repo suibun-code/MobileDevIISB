@@ -850,6 +850,18 @@ PrefabInstance:
       propertyPath: distance
       value: 8.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8051001329329511189, guid: 874b344f8b4b9fc4bab26048ac28dfb1, type: 3}
+      propertyPath: ShootingArrowSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: cf1b09edea8ce794496fbdc988eeff7a, type: 3}
+    - target: {fileID: 8051001329329511189, guid: 874b344f8b4b9fc4bab26048ac28dfb1, type: 3}
+      propertyPath: ShootingMagicSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 8f3918b0e0561ff40aaa912f7ed16bb5, type: 3}
+    - target: {fileID: 8051001329329511189, guid: 874b344f8b4b9fc4bab26048ac28dfb1, type: 3}
+      propertyPath: MeleeSwordSwingSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 27a5e00c79dafd54bb12c207daca4204, type: 3}
     - target: {fileID: 8920350510590944775, guid: 874b344f8b4b9fc4bab26048ac28dfb1, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0
@@ -1399,11 +1411,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78cf40a3851808e49beb8c42058c6a56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyedSFX: {fileID: 0}
-  EnemyHitWithArrowSFX: {fileID: 0}
-  EnemyHitWithMagicSFX: {fileID: 0}
-  EnemyHitWithPunchSFX: {fileID: 0}
-  EnemyHitWithSwordSFX: {fileID: 0}
+  DestroyedSFX: {fileID: 8300000, guid: 14d3f0a425dbacf42800eff9de87899c, type: 3}
+  EnemyHitWithArrowSFX: {fileID: 8300000, guid: 1f61e1b39dde39a43a102903be1d1cee, type: 3}
+  EnemyHitWithMagicSFX: {fileID: 8300000, guid: bf17fcedcde04d8499278a632dcd13e7, type: 3}
+  EnemyHitWithPunchSFX: {fileID: 8300000, guid: 8a3b91f548352894993f6f27a82c6d6f, type: 3}
+  EnemyHitWithSwordSFX: {fileID: 8300000, guid: 995bc507646f92742933047f8fea4244, type: 3}
 --- !u!1 &1826894647
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,7 +1515,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1864,6 +1876,22 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 770383744431537308, guid: 4eb36372dc94e0d4b9b3e45ebf005e30, type: 3}
+      propertyPath: DestroyedSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 14d3f0a425dbacf42800eff9de87899c, type: 3}
+    - target: {fileID: 770383744431537308, guid: 4eb36372dc94e0d4b9b3e45ebf005e30, type: 3}
+      propertyPath: TakeDamageSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 40d03d043cd200c439a5c0337cfd344a, type: 3}
+    - target: {fileID: 770383744431537308, guid: 4eb36372dc94e0d4b9b3e45ebf005e30, type: 3}
+      propertyPath: UpgradeTowerSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 4661c9e0b207ec24898d07108c8cc712, type: 3}
+    - target: {fileID: 770383744431537308, guid: 4eb36372dc94e0d4b9b3e45ebf005e30, type: 3}
+      propertyPath: SpendCurrencySFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 052417fb74ff5894bacdcd548ad6e9e5, type: 3}
+    - target: {fileID: 770383744431537308, guid: 4eb36372dc94e0d4b9b3e45ebf005e30, type: 3}
       propertyPath: HealthBarContainer
       value: 
       objectReference: {fileID: 803450616}
@@ -2083,6 +2111,10 @@ PrefabInstance:
       propertyPath: grid
       value: 
       objectReference: {fileID: 1531521761}
+    - target: {fileID: 3610863664728857826, guid: 5744ce538b9344c46b5fda12032ecc14, type: 3}
+      propertyPath: PlacingTowerSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: ce59aa0ebb5d15a43bf12356f37c2466, type: 3}
     - target: {fileID: 7835011969867614702, guid: 5744ce538b9344c46b5fda12032ecc14, type: 3}
       propertyPath: m_RootOrder
       value: 13

@@ -26,11 +26,12 @@ public class PlayerScript : MonoBehaviour
     //public Text BricksCountUI;
 
     //Audio
-    [Header("Audio")]
-    public AudioClip SpendCurrencySFX;
-    public AudioClip UpgradeTowerSFX;
-    public AudioClip DestroyedSFX;
-    
+    //[Header("Audio")]
+    //public AudioClip SpendCurrencySFX;
+    //public AudioClip UpgradeTowerSFX;
+    //public AudioClip DestroyedSFX;
+    //public AudioClip TakeDamageSFX;
+        
 
     void Start()
     {
@@ -58,9 +59,22 @@ public class PlayerScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
+           
+
             Destroy(other.gameObject);
+<<<<<<< Updated upstream
             TakeDamage(10.0f);
+=======
+<<<<<<< HEAD
+            TakeDamage(20.0f);
+            
+=======
+            TakeDamage(10.0f);
+>>>>>>> fca8f2be300f9f05cb5714e6dd52be943355487f
+>>>>>>> Stashed changes
             print("Take 10 damage");
+
+            
         }
         
     }
@@ -99,12 +113,27 @@ public class PlayerScript : MonoBehaviour
     // Also updating the healthbar and trigger death event
     void TakeDamage(float damage)
     {
+        
+
         if (Health > 0)
         {
+<<<<<<< Updated upstream
 
+=======
+<<<<<<< HEAD
+            //audio
+           // AudioSource.PlayClipAtPoint(TakeDamageSFX, transform.position);
+           // Debug.Log("BOOM");
+
+           // print("Take damage");
+
+=======
+
+>>>>>>> Stashed changes
 
             // play damage sfx
             // AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
+>>>>>>> fca8f2be300f9f05cb5714e6dd52be943355487f
 
 
             // set health value 
@@ -116,15 +145,31 @@ public class PlayerScript : MonoBehaviour
                 HealthBarContainer.transform.localScale.y,
                 1f * (Health / 100f)
             );
+<<<<<<< Updated upstream
 
             // update the new health value to the indicator
             HealthBarIndicator.GetComponent<TextMesh>().text = Health.ToString();
+=======
+>>>>>>> Stashed changes
 
+            // update the new health value to the indicator
+            HealthBarIndicator.GetComponent<TextMesh>().text = Health.ToString();
+           
 
         }
         else
         {
+<<<<<<< Updated upstream
             // Player Dies and goto the result screen
+=======
+<<<<<<< HEAD
+            // Player Dies
+            //audio
+            //AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
+=======
+            // Player Dies and goto the result screen
+>>>>>>> fca8f2be300f9f05cb5714e6dd52be943355487f
+>>>>>>> Stashed changes
         }
 
     }
