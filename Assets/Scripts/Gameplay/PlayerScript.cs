@@ -34,7 +34,10 @@ public class PlayerScript : MonoBehaviour
 
     void Start()
     {
+        // set health to 100
         Health = 100;
+
+        // set numeric health indicator's value to health value
         HealthBarIndicator.GetComponent<TextMesh>().text = Health.ToString();
 
         //DiamondResourcesCount = 0;
@@ -56,7 +59,7 @@ public class PlayerScript : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             Destroy(other.gameObject);
-            TakeDamage(20.0f);
+            TakeDamage(10.0f);
             print("Take 10 damage");
         }
         
@@ -98,25 +101,30 @@ public class PlayerScript : MonoBehaviour
     {
         if (Health > 0)
         {
-            print("Take damage");
 
-            //audio
+
+            // play damage sfx
             // AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
 
 
+            // set health value 
             Health -= damage;
+            
+            // set bar scale
             HealthBarContainer.transform.localScale = new Vector3(
                 HealthBarContainer.transform.localScale.x,
                 HealthBarContainer.transform.localScale.y,
                 1f * (Health / 100f)
             );
+
+            // update the new health value to the indicator
             HealthBarIndicator.GetComponent<TextMesh>().text = Health.ToString();
 
 
         }
         else
         {
-            // Player Dies
+            // Player Dies and goto the result screen
         }
 
     }
