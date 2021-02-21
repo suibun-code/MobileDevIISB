@@ -5,7 +5,7 @@ using UnityEngine;
 public class TowerManager : MonoBehaviour
 {
     public GameObject towerPrefab;
-    public Grid grid;
+    public Board Board;
 
     //Audio
     [Header("Audio")]

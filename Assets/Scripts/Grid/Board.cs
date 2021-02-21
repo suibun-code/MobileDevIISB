@@ -8,7 +8,7 @@ public enum CellState
     None, Enemy, Free, OutOfBounds
 }
 
-public class Grid : MonoBehaviour
+public class Board : MonoBehaviour
 {
     [SerializeField]
     public static int CellSizeZ = 32;

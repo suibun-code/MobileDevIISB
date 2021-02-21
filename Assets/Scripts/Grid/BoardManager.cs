@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GridManager : MonoBehaviour
+public class BoardManager : MonoBehaviour
 {
-    public Grid grid;
+    public Board Board;
 
     // Start is called before the first frame update
     void Start()
     {
-        grid.Init();
+        Board.Init();
     }
 
     // Update is called once per frame

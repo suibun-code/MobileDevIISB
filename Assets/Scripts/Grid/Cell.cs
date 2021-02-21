@@ -9,14 +9,14 @@ public class Cell : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Tower currentTower = null;
     public Vector2Int gridPosition = Vector2Int.zero;
-    public Grid grid = null;
+    public Board Board = null;
     public RectTransform rectTransform = null;
 
 
-    public void Setup(Vector2Int newGridPosition, Grid newGrid)
+    public void Setup(Vector2Int newGridPosition, Board newBoard)
     {
         gridPosition = newGridPosition;
-        grid = newGrid;
+        Board = newBoard;
 
         rectTransform = GetComponent<RectTransform>();
     }
