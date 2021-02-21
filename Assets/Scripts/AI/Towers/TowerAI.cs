@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent(typeof(LineRenderer))]
 public class TowerAI : MonoBehaviour
 {
 
@@ -16,6 +16,8 @@ public class TowerAI : MonoBehaviour
 
     public bool showRange;
     private float timer;
+    private LineRenderer lr;
+
 
     //Audio
     [Header("Audio")]
@@ -27,6 +29,7 @@ public class TowerAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        lr = GetComponent<LineRenderer>();
         currentTarget = GameObject.FindWithTag("Enemy");
         InvokeRepeating("Target", 0f, 0.5f);
     }
@@ -76,6 +79,16 @@ public class TowerAI : MonoBehaviour
     {
         Vector3 targetDir = currentTarget.transform.position - transform.position;
         Sphere.forward = targetDir;
+        RaycastHit hit;
+        if (Physics.Raycast(Sphere.forward, transform.forward, out hit))
+        {
+            if (hit.collider)
+            {
+                lr.SetPosition(1, new Vector3(0, 0, hit.distance));
+            }
+     
+        }
+            //Debug.DrawLine(Sphere.transform.position, currentTarget.transform.position, Color.red);
     }
 
     private void Shoot()
