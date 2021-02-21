@@ -30,7 +30,7 @@ public class TowerManager : MonoBehaviour
             towerComponent.SetCell(cellToPlaceIn);
 
             //audio
-            //AudioSource.PlayClipAtPoint(PlacingTowerSFX, transform.position);
+            AudioSource.PlayClipAtPoint(PlacingTowerSFX, transform.position);
         }
         else
             Debug.Log("You don't meet the resource requirement to build a tower!");

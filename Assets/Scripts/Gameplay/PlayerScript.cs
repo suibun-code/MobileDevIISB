@@ -27,10 +27,10 @@ public class PlayerScript : MonoBehaviour
 
     //Audio
     //[Header("Audio")]
-    //public AudioClip SpendCurrencySFX;
-    //public AudioClip UpgradeTowerSFX;
-    //public AudioClip DestroyedSFX;
-    //public AudioClip TakeDamageSFX;
+    public AudioClip SpendCurrencySFX;
+    public AudioClip UpgradeTowerSFX;
+    public AudioClip DestroyedSFX;
+    public AudioClip TakeDamageSFX;
         
 
     void Start()
@@ -111,11 +111,10 @@ public class PlayerScript : MonoBehaviour
         {
 
             //audio
-           // AudioSource.PlayClipAtPoint(TakeDamageSFX, transform.position);
-           // Debug.Log("BOOM");
+           AudioSource.PlayClipAtPoint(TakeDamageSFX, transform.position);
+           Debug.Log("BOOM");
 
-            // play damage sfx
-            // AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
+            
 
 
 
@@ -142,7 +141,7 @@ public class PlayerScript : MonoBehaviour
         {
 
             //audio
-            //AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
+            AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
 
             // Player Dies and goto the result screen
 
