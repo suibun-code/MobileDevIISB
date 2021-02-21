@@ -26,11 +26,12 @@ public class PlayerScript : MonoBehaviour
     //public Text BricksCountUI;
 
     //Audio
-    [Header("Audio")]
+    //[Header("Audio")]
     public AudioClip SpendCurrencySFX;
     public AudioClip UpgradeTowerSFX;
     public AudioClip DestroyedSFX;
-    
+    public AudioClip TakeDamageSFX;
+        
 
     void Start()
     {
@@ -58,9 +59,14 @@ public class PlayerScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
+        
             Destroy(other.gameObject);
             TakeDamage(10.0f);
+
+
             print("Take 10 damage");
+
+            
         }
         
     }
@@ -99,12 +105,17 @@ public class PlayerScript : MonoBehaviour
     // Also updating the healthbar and trigger death event
     void TakeDamage(float damage)
     {
+        
+
         if (Health > 0)
         {
 
+            //audio
+           AudioSource.PlayClipAtPoint(TakeDamageSFX, transform.position);
+           Debug.Log("BOOM");
 
-            // play damage sfx
-            // AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
+            
+
 
 
             // set health value 
@@ -117,14 +128,23 @@ public class PlayerScript : MonoBehaviour
                 1f * (Health / 100f)
             );
 
+
             // update the new health value to the indicator
             HealthBarIndicator.GetComponent<TextMesh>().text = Health.ToString();
 
+            // update the new health value to the indicator
+            HealthBarIndicator.GetComponent<TextMesh>().text = Health.ToString();
+           
 
         }
         else
         {
+
+            //audio
+            AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
+
             // Player Dies and goto the result screen
+
         }
 
     }

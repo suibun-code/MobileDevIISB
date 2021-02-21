@@ -1,0 +1,1 @@
+mage-light_01.png.png 8 6, mage-light_02.png.png 56 4, mage-light_03.png.png 104 6, mage-light_04.png.png 8 68, mage-light_05.png.png 56 66, mage-light_06.png.png 104 68, mage-light_07.png.png 8 134, mage-light_08.png.png 56 132, mage-light_09.png.png 104 134, mage-light_10.png.png 8 196, mage-light_11.png.png 56 194, mage-light_12.png.png 104 196.
