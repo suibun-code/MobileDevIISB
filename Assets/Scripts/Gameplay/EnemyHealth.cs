@@ -64,6 +64,9 @@ public class EnemyHealth : MonoBehaviour
         {
             // destroy enemy
             Destroy(EnemyRef);
+            ResourceInventorySystem.bricks += 5;
+            ResourceInventorySystem.gold += 3;
+            ResourceInventorySystem.diamond += 1;
         }
     }
 
