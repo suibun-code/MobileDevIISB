@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8867706746770147992}
   - component: {fileID: 2897341617983363926}
   - component: {fileID: 3769781736679816604}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 1122989112458134194}
   - component: {fileID: 1104393731625119066}
   - component: {fileID: 4889978229138611409}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GreenBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 4328861002667716921}
   - component: {fileID: 9216604136001019312}
   - component: {fileID: 7794388169981659963}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HealthBarContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 3276498009923234084}
   - component: {fileID: 5837589255509898180}
   - component: {fileID: 5870412892274725103}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HealthIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -456,6 +456,7 @@ MonoBehaviour:
   SpendCurrencySFX: {fileID: 0}
   UpgradeTowerSFX: {fileID: 0}
   DestroyedSFX: {fileID: 0}
+  TakeDamageSFX: {fileID: 0}
 --- !u!54 &2931001469924121824
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -481,7 +482,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1305320863755088436}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Contrainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
