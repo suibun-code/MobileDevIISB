@@ -62,16 +62,16 @@ public class PlayerScript : MonoBehaviour
            
 
             Destroy(other.gameObject);
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
             TakeDamage(10.0f);
-=======
-<<<<<<< HEAD
+//=======
+//<<<<<<< HEAD
             TakeDamage(20.0f);
             
-=======
+//=======
             TakeDamage(10.0f);
->>>>>>> fca8f2be300f9f05cb5714e6dd52be943355487f
->>>>>>> Stashed changes
+//>>>>>>> fca8f2be300f9f05cb5714e6dd52be943355487f
+//>>>>>>> Stashed changes
             print("Take 10 damage");
 
             
@@ -117,23 +117,23 @@ public class PlayerScript : MonoBehaviour
 
         if (Health > 0)
         {
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
 
-=======
-<<<<<<< HEAD
+//=======
+//<<<<<<< HEAD
             //audio
            // AudioSource.PlayClipAtPoint(TakeDamageSFX, transform.position);
            // Debug.Log("BOOM");
 
            // print("Take damage");
 
-=======
+//=======
 
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
 
             // play damage sfx
             // AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
->>>>>>> fca8f2be300f9f05cb5714e6dd52be943355487f
+//>>>>>>> fca8f2be300f9f05cb5714e6dd52be943355487f
 
 
             // set health value 
@@ -145,12 +145,12 @@ public class PlayerScript : MonoBehaviour
                 HealthBarContainer.transform.localScale.y,
                 1f * (Health / 100f)
             );
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
 
             // update the new health value to the indicator
             HealthBarIndicator.GetComponent<TextMesh>().text = Health.ToString();
-=======
->>>>>>> Stashed changes
+//=======
+//>>>>>>> Stashed changes
 
             // update the new health value to the indicator
             HealthBarIndicator.GetComponent<TextMesh>().text = Health.ToString();
@@ -159,17 +159,17 @@ public class PlayerScript : MonoBehaviour
         }
         else
         {
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
             // Player Dies and goto the result screen
-=======
-<<<<<<< HEAD
+//=======
+//<<<<<<< HEAD
             // Player Dies
             //audio
             //AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
-=======
+//=======
             // Player Dies and goto the result screen
->>>>>>> fca8f2be300f9f05cb5714e6dd52be943355487f
->>>>>>> Stashed changes
+//>>>>>>> fca8f2be300f9f05cb5714e6dd52be943355487f
+//>>>>>>> Stashed changes
         }
 
     }
