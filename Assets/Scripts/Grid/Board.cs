@@ -20,6 +20,8 @@ public class Board : MonoBehaviour
 
     public void Init()
     {
+        gameObject.SetActive(false);
+
         for (int i = 0; i < CellSizeZ; i++)
             for (int j = 0; j < CellSizeX; j++)
             {
@@ -38,7 +40,7 @@ public class Board : MonoBehaviour
                 int offset = (j % 2 != 0) ? 0 : 1;
                 int finalX = i + offset;
 
-                allCells[finalX, j].GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 30);
+                allCells[finalX, j].GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 128);
             }
     }
 }

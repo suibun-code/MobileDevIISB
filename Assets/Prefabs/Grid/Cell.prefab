@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.1981132, g: 0.1981132, b: 0.1981132, a: 0.11764706}
+  m_Color: {r: 0.1981132, g: 0.1981132, b: 0.1981132, a: 0.5019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -101,11 +101,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0eb26f2de689e4290986f726ed437f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerManager: {fileID: 3610863664728857826, guid: 5744ce538b9344c46b5fda12032ecc14, type: 3}
+  towerManager: {fileID: 5757593198903009892, guid: 5744ce538b9344c46b5fda12032ecc14, type: 3}
   spriteRenderer: {fileID: 0}
   currentTower: {fileID: 0}
   gridPosition: {x: 0, y: 0}
-  grid: {fileID: 0}
+  board: {fileID: 0}
   rectTransform: {fileID: 0}
 --- !u!65 &5089365609436160771
 BoxCollider:

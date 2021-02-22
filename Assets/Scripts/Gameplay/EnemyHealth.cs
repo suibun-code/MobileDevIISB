@@ -4,19 +4,11 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    
-    
     public GameObject HealthBarContainerRef;
     public GameObject EnemyRef;
     GameObject CamRef;
 
-
-
-
-
     float Health;
-    
-
 
     void Start()
     {
@@ -24,13 +16,10 @@ public class EnemyHealth : MonoBehaviour
         Health = 100f;
     }
 
-
     void Update()
     {
-
-        
         // test purpose
-        if(Time.frameCount % 120 == 0)
+        if (Time.frameCount % 120 == 0)
         {
             TakeDamage(10);
         }
@@ -38,15 +27,13 @@ public class EnemyHealth : MonoBehaviour
         // Roatate healthbar if its not facing the camera
         if (transform.rotation != Quaternion.Euler(-45f, 90f, 0f))
         {
-            transform.rotation = Quaternion.Euler( 
+            transform.rotation = Quaternion.Euler(
                 -45f,
                 90f,
                 0f
             );
         }
     }
-
-
 
     void TakeDamage(int damage)
     {
@@ -67,8 +54,18 @@ public class EnemyHealth : MonoBehaviour
             ResourceInventorySystem.bricks += 5;
             ResourceInventorySystem.gold += 3;
             ResourceInventorySystem.diamond += 1;
+
+            if (ResourceInventorySystem.bricks >= 10 && ResourceInventorySystem.gold >= 5 &&
+                  ResourceInventorySystem.diamond >= 2)
+            {
+                ToggleBoard.buildText.color = Color.green;
+                ToggleBoard.buildText.text = "Can build.";
+            }
+            else
+            {
+                ToggleBoard.buildText.color = Color.red;
+                ToggleBoard.buildText.text = "Can not build.";
+            }
         }
     }
-
-
 }

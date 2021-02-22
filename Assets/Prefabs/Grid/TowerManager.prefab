@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7835011969867614702}
-  - component: {fileID: 3610863664728857826}
+  - component: {fileID: 5757593198903009892}
   m_Layer: 0
   m_Name: TowerManager
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3610863664728857826
+--- !u!114 &5757593198903009892
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,8 +40,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 749931897753090660}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33fc95d5999929f49b8198211ebd9b9d, type: 3}
+  m_Script: {fileID: 11500000, guid: f36c4729c07025a44bc18753cb1dc32f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerPrefabs:
+  - {fileID: 5424123895397131196, guid: 874b344f8b4b9fc4bab26048ac28dfb1, type: 3}
+  - {fileID: 7872222697323657780, guid: ca4f9ead80d14cf46a2a36931649e871, type: 3}
   towerPrefab: {fileID: 5424123895397131196, guid: 874b344f8b4b9fc4bab26048ac28dfb1, type: 3}
-  grid: {fileID: 0}
+  towerToBuild: 0
+  board: {fileID: 0}
+  PlacingTowerSFX: {fileID: 8300000, guid: ce59aa0ebb5d15a43bf12356f37c2466, type: 3}

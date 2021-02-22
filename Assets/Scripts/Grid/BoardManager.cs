@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class BoardManager : MonoBehaviour
 {
-    public Board Board;
+    public Board board;
 
     // Start is called before the first frame update
     void Start()
     {
-        Board.Init();
+        board.Init();
     }
 
     // Update is called once per frame

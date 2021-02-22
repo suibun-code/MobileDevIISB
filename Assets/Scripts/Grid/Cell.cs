@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class Cell : MonoBehaviour
 {
-    public TowerManager towerManager;
+    public TowerManager3 towerManager;
 
     public SpriteRenderer spriteRenderer;
     public Tower currentTower = null;
     public Vector2Int gridPosition = Vector2Int.zero;
-    public Board Board = null;
+    public Board board = null;
     public RectTransform rectTransform = null;
 
 
     public void Setup(Vector2Int newGridPosition, Board newBoard)
     {
         gridPosition = newGridPosition;
-        Board = newBoard;
+        board = newBoard;
 
         rectTransform = GetComponent<RectTransform>();
     }

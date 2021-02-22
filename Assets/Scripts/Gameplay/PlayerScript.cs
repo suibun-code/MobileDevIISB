@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
-
-
     // Parameters
     float Health;
     //public int DiamondResourcesCount;
@@ -31,7 +29,7 @@ public class PlayerScript : MonoBehaviour
     public AudioClip UpgradeTowerSFX;
     public AudioClip DestroyedSFX;
     public AudioClip TakeDamageSFX;
-        
+
 
     void Start()
     {
@@ -44,31 +42,21 @@ public class PlayerScript : MonoBehaviour
         //DiamondResourcesCount = 0;
         //GoldResourcesCount = 0;
         //BricksResourcesCount = 0;
-
-
     }
 
     void Update()
     {
-        
+
     }
-
-
 
     void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Enemy")
         {
-        
             Destroy(other.gameObject);
             TakeDamage(10.0f);
-
-
             print("Take 10 damage");
-
-            
         }
-        
     }
 
     private void OnCollisionStay(Collision other)
@@ -99,28 +87,21 @@ public class PlayerScript : MonoBehaviour
     //    BricksCountUI.text = BricksResourcesCount.ToString();
     //}
 
-    
+
 
     // Apply damage to player
     // Also updating the healthbar and trigger death event
     void TakeDamage(float damage)
     {
-        
-
         if (Health > 0)
         {
-
             //audio
-           AudioSource.PlayClipAtPoint(TakeDamageSFX, transform.position);
-           Debug.Log("BOOM");
-
-            
-
-
+            AudioSource.PlayClipAtPoint(TakeDamageSFX, transform.position);
+            Debug.Log("BOOM");
 
             // set health value 
             Health -= damage;
-            
+
             // set bar scale
             HealthBarContainer.transform.localScale = new Vector3(
                 HealthBarContainer.transform.localScale.x,
@@ -128,28 +109,18 @@ public class PlayerScript : MonoBehaviour
                 1f * (Health / 100f)
             );
 
-
             // update the new health value to the indicator
             HealthBarIndicator.GetComponent<TextMesh>().text = Health.ToString();
 
             // update the new health value to the indicator
             HealthBarIndicator.GetComponent<TextMesh>().text = Health.ToString();
-           
-
         }
         else
         {
-
             //audio
             AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
 
             // Player Dies and goto the result screen
-
         }
-
     }
-
-
-
-
 }
