@@ -51,9 +51,9 @@ public class EnemyHealth : MonoBehaviour
         {
             // destroy enemy
             Destroy(EnemyRef);
-            ResourceInventorySystem.bricks += 5;
-            ResourceInventorySystem.gold += 3;
-            ResourceInventorySystem.diamond += 1;
+            ResourceInventorySystem.bricks += 15;
+            ResourceInventorySystem.gold += 9;
+            ResourceInventorySystem.diamond += 3;
 
             if (ResourceInventorySystem.bricks >= 10 && ResourceInventorySystem.gold >= 5 &&
                   ResourceInventorySystem.diamond >= 2)
