@@ -97,7 +97,7 @@ public class PlayerScript : MonoBehaviour
         {
             //audio
             AudioSource.PlayClipAtPoint(TakeDamageSFX, transform.position);
-            Debug.Log("BOOM");
+            // Debug.Log("BOOM");
 
             // set health value 
             Health -= damage;
@@ -108,6 +108,21 @@ public class PlayerScript : MonoBehaviour
                 HealthBarContainer.transform.localScale.y,
                 1f * (Health / 100f)
             );
+
+            // change health bar color
+            if (Health <= 20)
+            {
+                gameObject.transform.Find("HealthBarContainer").gameObject.transform.Find("Container").gameObject.transform.Find("GreenBar").GetComponent<Renderer>().material.SetColor("_Color",Color.red);
+                HealthBarIndicator.GetComponent<TextMesh>().color = Color.red;
+            }
+            else if(Health > 20 && Health <= 50)
+            {
+                gameObject.transform.Find("HealthBarContainer").gameObject.transform.Find("Container").gameObject.transform.Find("GreenBar").GetComponent<Renderer>().material.SetColor("_Color",Color.yellow);
+                HealthBarIndicator.GetComponent<TextMesh>().color = Color.yellow;
+            
+            }
+
+
 
             // update the new health value to the indicator
             HealthBarIndicator.GetComponent<TextMesh>().text = Health.ToString();

@@ -22,7 +22,7 @@ public class EnemyHealth : MonoBehaviour
         // test purpose
         if (Time.frameCount % 120 == 0)
         {
-            TakeDamage(5);
+            TakeDamage(2);
         }
 
 
@@ -49,6 +49,23 @@ public class EnemyHealth : MonoBehaviour
                 HealthBarContainerRef.transform.localScale.y,
                 HealthBarContainerRef.transform.localScale.z
             );
+
+
+
+            // change health bar color along with current health
+            if(Health <= 30)
+            {
+                gameObject.transform.Find("Container").transform.Find("HealthBar").GetComponent<Renderer>().material.SetColor("_Color", Color.red);
+                
+            }
+            else if (Health <= 60 && Health > 30)
+            {
+                gameObject.transform.Find("Container").transform.Find("HealthBar").GetComponent<Renderer>().material.SetColor("_Color", Color.yellow);
+            }
+
+
+            
+
         }
         else
         {

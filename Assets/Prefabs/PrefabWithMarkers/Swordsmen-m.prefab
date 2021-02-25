@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2249854864815158136}
   m_Layer: 0
   m_Name: Swordsmen-m
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,6 +34,7 @@ Transform:
   m_Children:
   - {fileID: 3771028133377368636}
   - {fileID: 732418157789642612}
+  - {fileID: 8187450729094717423}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -243,6 +244,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 309c262569d087a42bb0180b91c06e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &4453942947078473122
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4599179599959364673}
+    m_Modifications:
+    - target: {fileID: 5498963916200090189, guid: 7617c78e1d32e2942b3f3b66cc827e51, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498963916200090189, guid: 7617c78e1d32e2942b3f3b66cc827e51, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498963916200090189, guid: 7617c78e1d32e2942b3f3b66cc827e51, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498963916200090189, guid: 7617c78e1d32e2942b3f3b66cc827e51, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498963916200090189, guid: 7617c78e1d32e2942b3f3b66cc827e51, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6532815
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498963916200090189, guid: 7617c78e1d32e2942b3f3b66cc827e51, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.27059805
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498963916200090189, guid: 7617c78e1d32e2942b3f3b66cc827e51, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6532815
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498963916200090189, guid: 7617c78e1d32e2942b3f3b66cc827e51, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.27059805
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498963916200090189, guid: 7617c78e1d32e2942b3f3b66cc827e51, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498963916200090189, guid: 7617c78e1d32e2942b3f3b66cc827e51, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498963916200090189, guid: 7617c78e1d32e2942b3f3b66cc827e51, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5712469980415485192, guid: 7617c78e1d32e2942b3f3b66cc827e51, type: 3}
+      propertyPath: EnemyRef
+      value: 
+      objectReference: {fileID: 4376230341402320437}
+    - target: {fileID: 8832351277870090056, guid: 7617c78e1d32e2942b3f3b66cc827e51, type: 3}
+      propertyPath: m_Name
+      value: EnemyHealthBar
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7617c78e1d32e2942b3f3b66cc827e51, type: 3}
+--- !u!4 &8187450729094717423 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5498963916200090189, guid: 7617c78e1d32e2942b3f3b66cc827e51, type: 3}
+  m_PrefabInstance: {fileID: 4453942947078473122}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5372022566570524513
 PrefabInstance:
   m_ObjectHideFlags: 0
