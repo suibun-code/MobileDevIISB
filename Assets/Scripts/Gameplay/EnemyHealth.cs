@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,10 +22,12 @@ public class EnemyHealth : MonoBehaviour
         // test purpose
         if (Time.frameCount % 120 == 0)
         {
-            TakeDamage(10);
+            TakeDamage(5);
         }
 
-        // Roatate healthbar if its not facing the camera
+
+
+        // Roatate healthbar if its not parallel to canvas
         if (transform.rotation != Quaternion.Euler(-45f, 90f, 0f))
         {
             transform.rotation = Quaternion.Euler(
