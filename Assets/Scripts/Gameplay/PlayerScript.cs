@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -46,6 +46,40 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
+        //Go to Game Over Screen
+        if (Health <= 0)
+        {
+            StartCoroutine(LoadAsynSceneCoroutine());
+        }
+    }
+
+    [Header("Scene")]
+    public string SceneName;
+    private float time;
+
+    // Coroutine to go to the Game Over Screen
+    IEnumerator LoadAsynSceneCoroutine()
+    {
+        // if loading already finish, wait until 5 second (too short).
+        AsyncOperation operation = SceneManager.LoadSceneAsync(SceneName);
+
+        operation.allowSceneActivation = false;
+
+
+        while (!operation.isDone)
+        {
+
+            time += Time.deltaTime;
+
+            //loadingBar.fillAmount = time / 3f;
+
+            if (time > 2)
+            {
+                operation.allowSceneActivation = true;
+            }
+
+            yield return null;
+        }
 
     }
 
