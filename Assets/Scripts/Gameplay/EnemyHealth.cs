@@ -32,7 +32,7 @@ public class EnemyHealth : MonoBehaviour
         if (Time.frameCount % 120 == 0)
         {
             TakeDamage(2);
-            AudioSource.PlayClipAtPoint(GenericDamageSFX, transform.position);
+            // AudioSource.PlayClipAtPoint(GenericDamageSFX, transform.position);
         }
 
 

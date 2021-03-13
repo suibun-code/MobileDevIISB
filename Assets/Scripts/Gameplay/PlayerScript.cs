@@ -94,7 +94,7 @@ public class PlayerScript : MonoBehaviour
             AudioSource.PlayClipAtPoint(TakeDamageSFX, transform.position);
             Destroy(other.gameObject);
             TakeDamage(10.0f);
-            print("Take 10 damage");
+            // print("Take 10 damage");
         }
     }
 
