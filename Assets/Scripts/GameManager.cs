@@ -36,6 +36,10 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+    // win state (use for result scene)
+    public bool isWin;
+    public int score;
+
     // Change scene
     public void ChangeScene(string sceneName)
     {
