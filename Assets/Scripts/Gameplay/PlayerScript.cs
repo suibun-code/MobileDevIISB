@@ -91,6 +91,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
+            AudioSource.PlayClipAtPoint(TakeDamageSFX, transform.position);
             Destroy(other.gameObject);
             TakeDamage(10.0f);
             print("Take 10 damage");

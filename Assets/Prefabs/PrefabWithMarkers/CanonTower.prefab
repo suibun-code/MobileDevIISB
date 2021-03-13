@@ -149,9 +149,9 @@ MonoBehaviour:
   turnSpeed: 2
   shotCoolDown: 0
   showRange: 1
-  ShootingMagicSFX: {fileID: 0}
-  ShootingArrowSFX: {fileID: 0}
-  MeleeSwordSwingSFX: {fileID: 0}
+  ShootingMagicSFX: {fileID: 8300000, guid: 8f3918b0e0561ff40aaa912f7ed16bb5, type: 3}
+  ShootingArrowSFX: {fileID: 8300000, guid: cf1b09edea8ce794496fbdc988eeff7a, type: 3}
+  MeleeSwordSwingSFX: {fileID: 8300000, guid: 27a5e00c79dafd54bb12c207daca4204, type: 3}
 --- !u!135 &7872222697323657783
 SphereCollider:
   m_ObjectHideFlags: 0

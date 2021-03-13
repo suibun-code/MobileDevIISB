@@ -97,7 +97,7 @@ public class TowerAI : MonoBehaviour
 
         //audio
         AudioSource.PlayClipAtPoint(ShootingArrowSFX, transform.position);
-        // Debug.Log("BANG");
+         Debug.Log("BANG");
         
     }
 

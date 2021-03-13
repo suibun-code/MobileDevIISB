@@ -11,6 +11,15 @@ public class EnemyHealth : MonoBehaviour
 
     float Health;
 
+    //audio
+    [Header("Audio")]
+    public AudioClip DestroyedSFX;
+    public AudioClip EnemyHitWithArrowSFX;
+    public AudioClip EnemyHitWithMagicSFX;
+    public AudioClip EnemyHitWithPunchSFX;
+    public AudioClip EnemyHitWithSwordSFX;
+    public AudioClip GenericDamageSFX;
+
     void Start()
     {
         CamRef = GameObject.FindGameObjectWithTag("MainCamera");
@@ -23,6 +32,7 @@ public class EnemyHealth : MonoBehaviour
         if (Time.frameCount % 120 == 0)
         {
             TakeDamage(2);
+            AudioSource.PlayClipAtPoint(GenericDamageSFX, transform.position);
         }
 
 
@@ -74,6 +84,8 @@ public class EnemyHealth : MonoBehaviour
             ResourceInventorySystem.bricks += 15;
             ResourceInventorySystem.gold += 9;
             ResourceInventorySystem.diamond += 3;
+
+            AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
 
             if (ResourceInventorySystem.bricks >= 10 && ResourceInventorySystem.gold >= 5 &&
                   ResourceInventorySystem.diamond >= 2)
