@@ -49,7 +49,11 @@ public class PlayerScript : MonoBehaviour
         //Go to Game Over Screen
         if (Health <= 0)
         {
-            StartCoroutine(LoadAsynSceneCoroutine());
+            // when hp under 0, move to lose state
+            GameManager.Instance.isWin = false;
+            GameManager.Instance.ChangeScene("GameResult");
+            
+            //StartCoroutine(LoadAsynSceneCoroutine());
         }
     }
 
