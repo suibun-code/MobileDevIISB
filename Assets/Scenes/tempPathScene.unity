@@ -4558,6 +4558,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 770383744431537308, guid: 4eb36372dc94e0d4b9b3e45ebf005e30, type: 3}
+      propertyPath: SceneName
+      value: GameResult
+      objectReference: {fileID: 0}
+    - target: {fileID: 770383744431537308, guid: 4eb36372dc94e0d4b9b3e45ebf005e30, type: 3}
       propertyPath: DestroyedSFX
       value: 
       objectReference: {fileID: 8300000, guid: 14d3f0a425dbacf42800eff9de87899c, type: 3}

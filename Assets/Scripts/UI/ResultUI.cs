@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class ResultUI : MonoBehaviour
 {
     // win image background
@@ -27,15 +28,5 @@ public class ResultUI : MonoBehaviour
             loseImage.SetActive(true);
             resultText.text = "Game Over";
         }
-    }
-    // restart button
-    public void RestartButton()
-    {
-        GameManager.Instance.ChangeScene("MainGame");
-    }
-    // mainmenu button
-    public void MainmenuButton()
-    {
-        GameManager.Instance.ChangeScene("MainMenu");
     }
 }
