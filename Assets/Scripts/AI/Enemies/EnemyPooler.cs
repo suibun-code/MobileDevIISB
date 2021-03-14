@@ -8,8 +8,8 @@ public class EnemyPooler : MonoBehaviour
     [SerializeField]
     public GameObject Archer;
     public GameObject Mummy;
-    public GameObject Swordsmen;
-    public GameObject Wizard;
+    public GameObject Mage;
+    public GameObject Warrior;
 
     //public class Pool
 
