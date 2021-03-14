@@ -133,12 +133,12 @@ public class PlayerScript : MonoBehaviour
     void TakeDamage(float damage)
     {
         AudioSource.PlayClipAtPoint(TakeDamageSFX, transform.position);
-        // Debug.Log("WHACK");
+        Debug.Log("WHACK");
         if (Health > 0)
         {
             //audio
             AudioSource.PlayClipAtPoint(TakeDamageSFX, transform.position);
-            // Debug.Log("BOOM");
+            Debug.Log("BOOM");
 
             // set health value 
             Health -= damage;
