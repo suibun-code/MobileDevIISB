@@ -2855,7 +2855,6 @@ GameObject:
   - component: {fileID: 1873142472}
   - component: {fileID: 1873142471}
   - component: {fileID: 1873142470}
-  - component: {fileID: 1873142469}
   m_Layer: 7
   m_Name: Background
   m_TagString: Untagged
@@ -2863,20 +2862,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &1873142469
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1873142468}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1873142470
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3856,5 +3841,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1290540364}
-    m_RemovedComponents: []
+    - target: {fileID: 5686147700369415869, guid: 0f20eeeeb8c6f3b459910dc620312936, type: 3}
+      propertyPath: m_TagString
+      value: ResourceIndicator
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6841795381628863853, guid: 0f20eeeeb8c6f3b459910dc620312936, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0f20eeeeb8c6f3b459910dc620312936, type: 3}

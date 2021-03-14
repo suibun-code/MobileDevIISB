@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 7872222697323657782}
   - component: {fileID: 7872222697323657783}
   - component: {fileID: 4954786660218488627}
+  - component: {fileID: 6754592785861196522}
   m_Layer: 2
   m_Name: CanonTower
   m_TagString: Untagged
@@ -264,6 +265,21 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &6754592785861196522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7872222697323657780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bf94a04bc921f149b4dde36757a4ea9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RequiredBricks: 10
+  RequiredGolds: 5
+  RequiredDiamonds: 4
 --- !u!1 &7872222697338276904
 GameObject:
   m_ObjectHideFlags: 0

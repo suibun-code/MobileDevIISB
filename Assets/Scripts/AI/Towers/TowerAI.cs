@@ -94,7 +94,7 @@ public class TowerAI : MonoBehaviour
     private void Shoot()
     {
         //audio
-        AudioSource.PlayClipAtPoint(ShootingArrowSFX, transform.position);
+        // AudioSource.PlayClipAtPoint(ShootingArrowSFX, transform.position);
         
     }
 

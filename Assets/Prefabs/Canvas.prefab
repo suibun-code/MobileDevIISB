@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6655348777123954512}
   - component: {fileID: 9130909271315875148}
   - component: {fileID: 8186900945171624276}
-  - component: {fileID: 6501588826632722041}
+  - component: {fileID: 6426417284289544478}
   m_Layer: 5
   m_Name: CanonTowerDraggableIcon
   m_TagString: Untagged
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6501588826632722041
+--- !u!114 &6426417284289544478
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -85,11 +85,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4663273992207112465}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b83153ef08267444b2074559865c262, type: 3}
+  m_Script: {fileID: 11500000, guid: f342d65b87834604c87e908528808bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canvasRef: {fileID: 5686147698952866961}
-  TowerType: 0
+  TargetTower: {fileID: 7872222697323657780, guid: ca4f9ead80d14cf46a2a36931649e871, type: 3}
 --- !u!1 &5686147698327306331
 GameObject:
   m_ObjectHideFlags: 0
@@ -3321,7 +3321,7 @@ GameObject:
   - component: {fileID: 5686147700371541119}
   - component: {fileID: 5686147700371541113}
   - component: {fileID: 5686147700371541112}
-  - component: {fileID: 5686147700371541114}
+  - component: {fileID: 7680884619486571315}
   m_Layer: 5
   m_Name: SniperTowerDraggableIcon
   m_TagString: Untagged
@@ -3386,7 +3386,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5686147700371541114
+--- !u!114 &7680884619486571315
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3395,11 +3395,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5686147700371541118}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b83153ef08267444b2074559865c262, type: 3}
+  m_Script: {fileID: 11500000, guid: f342d65b87834604c87e908528808bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canvasRef: {fileID: 5686147698952866961}
-  TowerType: 0
+  TargetTower: {fileID: 5424123895397131196, guid: 874b344f8b4b9fc4bab26048ac28dfb1, type: 3}
 --- !u!1 &8326990897746079637
 GameObject:
   m_ObjectHideFlags: 0
@@ -3411,7 +3411,7 @@ GameObject:
   - component: {fileID: 2724808760996172713}
   - component: {fileID: 2367735653876948161}
   - component: {fileID: 7859841230137361444}
-  - component: {fileID: 6841795381628863853}
+  - component: {fileID: 7286276368602343907}
   m_Layer: 5
   m_Name: CobraTowerDraggableIcon
   m_TagString: Untagged
@@ -3476,7 +3476,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6841795381628863853
+--- !u!114 &7286276368602343907
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3485,8 +3485,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8326990897746079637}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b83153ef08267444b2074559865c262, type: 3}
+  m_Script: {fileID: 11500000, guid: f342d65b87834604c87e908528808bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canvasRef: {fileID: 5686147698952866961}
-  TowerType: 0
+  TargetTower: {fileID: 5424123895397131196, guid: 874b344f8b4b9fc4bab26048ac28dfb1, type: 3}
