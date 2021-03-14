@@ -120,13 +120,33 @@ public class DragAndDropIcon : MonoBehaviour, IPointerDownHandler, IBeginDragHan
             {
                 if(hit.transform != null)
                 {
-                    print("hit");
-                    print(hit.transform.gameObject.transform.position);
+                    // print("hit");
+                    // print(hit.transform.gameObject.transform.position);
 
+                    // get cell
                     Cell cellRef = hit.transform.gameObject.GetComponent<Cell>();
-                    Instantiate(TargetTower, new Vector3(cellRef.transform.position.x, 3.0f, cellRef.transform.position.z), Quaternion.Euler(0,0,0));
+                    
+                    // if no tower on the cell
+                    if (cellRef.currentTower == null)
+                    {
+                        
+                        // spawn tower in the designated cell
+                        Instantiate(TargetTower, new Vector3(cellRef.transform.position.x, 3.0f, cellRef.transform.position.z), Quaternion.Euler(0,0,0));
+                        
+                        // set that cell's tower to the tower spawned
+                        cellRef.currentTower = TargetTower.GetComponent<Tower>();
+                        
+                        // deduct resources from the inventory
+                        DeductResources();
+
+                    }
+                    
+
+
                 }
             }
+
+
 
 
 
@@ -163,5 +183,12 @@ public class DragAndDropIcon : MonoBehaviour, IPointerDownHandler, IBeginDragHan
         );
     }
 
+    // deduct resources from the inventory system
+    void DeductResources()
+    {
+        ResourceInventorySystem.bricks -= TInfo.RequiredBricks;
+        ResourceInventorySystem.gold -= TInfo.RequiredGolds;
+        ResourceInventorySystem.diamond -= TInfo.RequiredDiamonds;
+    }
 
 }
