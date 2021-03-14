@@ -8,6 +8,9 @@ TagManager:
   - Ground
   - TowerManager
   - Canvas
+  - Board
+  - Cell
+  - ResourceIndicator
   layers:
   - Default
   - TransparentFX

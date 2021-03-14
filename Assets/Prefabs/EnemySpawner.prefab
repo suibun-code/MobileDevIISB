@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4520279808982419123
+--- !u!1 &8509542634587045066
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4520279808982419121}
-  - component: {fileID: 4520279808982419122}
+  - component: {fileID: 8509542634587045077}
+  - component: {fileID: 3253124620676445679}
   m_Layer: 0
-  m_Name: Board
-  m_TagString: Board
+  m_Name: EnemySpawner
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4520279808982419121
+--- !u!4 &8509542634587045077
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4520279808982419123}
+  m_GameObject: {fileID: 8509542634587045066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.92021, y: 6.6631784, z: 15.492672}
+  m_LocalPosition: {x: 22.81, y: 29.276596, z: -26.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4520279808982419122
+--- !u!114 &3253124620676445679
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4520279808982419123}
+  m_GameObject: {fileID: 8509542634587045066}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 116561b68bd169e4598e9f25f73713c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ae018d9ea5705840b0d147549a8d19a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cellPrefab: {fileID: 4183107822502881559, guid: 83aaaf1c664de9345b73aa2e8170edfd, type: 3}
+  Archer: {fileID: 0}
+  Mummy: {fileID: 0}
+  Mage: {fileID: 0}
+  Warrior: {fileID: 0}

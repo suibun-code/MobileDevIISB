@@ -1,12 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public enum TowerToBuild
-{
-    Sniper = 0,
-    Canon = 1
-}
+using TowerInformation;
 
 public class TowerManager3 : MonoBehaviour
 {
