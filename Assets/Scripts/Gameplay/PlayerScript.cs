@@ -52,7 +52,7 @@ public class PlayerScript : MonoBehaviour
             // when hp under 0, move to lose state
             GameManager.Instance.isWin = false;
             GameManager.Instance.ChangeScene("GameResult");
-            
+
             //StartCoroutine(LoadAsynSceneCoroutine());
         }
     }
@@ -138,7 +138,7 @@ public class PlayerScript : MonoBehaviour
         {
             //audio
             AudioSource.PlayClipAtPoint(TakeDamageSFX, transform.position);
-             Debug.Log("BOOM");
+            Debug.Log("BOOM");
 
             // set health value 
             Health -= damage;
@@ -153,14 +153,14 @@ public class PlayerScript : MonoBehaviour
             // change health bar color
             if (Health <= 20)
             {
-                gameObject.transform.Find("HealthBarContainer").gameObject.transform.Find("Container").gameObject.transform.Find("GreenBar").GetComponent<Renderer>().material.SetColor("_Color",Color.red);
+                gameObject.transform.Find("HealthBarContainer").gameObject.transform.Find("Container").gameObject.transform.Find("GreenBar").GetComponent<Renderer>().material.SetColor("_Color", Color.red);
                 HealthBarIndicator.GetComponent<TextMesh>().color = Color.red;
             }
-            else if(Health > 20 && Health <= 50)
+            else if (Health > 20 && Health <= 50)
             {
-                gameObject.transform.Find("HealthBarContainer").gameObject.transform.Find("Container").gameObject.transform.Find("GreenBar").GetComponent<Renderer>().material.SetColor("_Color",Color.yellow);
+                gameObject.transform.Find("HealthBarContainer").gameObject.transform.Find("Container").gameObject.transform.Find("GreenBar").GetComponent<Renderer>().material.SetColor("_Color", Color.yellow);
                 HealthBarIndicator.GetComponent<TextMesh>().color = Color.yellow;
-            
+
             }
 
 
@@ -177,13 +177,12 @@ public class PlayerScript : MonoBehaviour
                 AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
                 Debug.Log("Player DESTROYED!");
             }
-        else
-        {
-                //audio
-                AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
-                Debug.Log("DESTROYED!");
+            else
+            {
+                
 
                 // Player Dies and goto the result screen
             }
+        }
     }
 }
