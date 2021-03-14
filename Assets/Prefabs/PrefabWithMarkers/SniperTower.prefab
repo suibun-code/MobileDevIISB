@@ -45,7 +45,6 @@ GameObject:
   - component: {fileID: 8051001329329511189}
   - component: {fileID: 693321146}
   - component: {fileID: 3081134813984358481}
-  - component: {fileID: 7186662852261531367}
   - component: {fileID: 693321153}
   - component: {fileID: 693321154}
   m_Layer: 2
@@ -64,7 +63,7 @@ Transform:
   m_GameObject: {fileID: 5424123895397131196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.04, y: 2.49, z: 17.343142}
-  m_LocalScale: {x: 3.3736, y: 3.3736, z: 3.3736}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 3863661757760084047}
   - {fileID: 4107223351576904991}
@@ -146,13 +145,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cebc2363fd8b744cb37b0705b0185f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shot: {fileID: 1080333782050803122}
-  Sphere: {fileID: 8920350510590944775}
-  distance: 15
-  damage: 30
-  turnSpeed: 2
-  shotCoolDown: 0
-  showRange: 1
+  currentTarget: {fileID: 0}
+  sphereTransform: {fileID: 8920350510590944775}
+  damage: 50
+  shotCoolDown: 1
   ShootingMagicSFX: {fileID: 8300000, guid: 8f3918b0e0561ff40aaa912f7ed16bb5, type: 3}
   ShootingArrowSFX: {fileID: 8300000, guid: cf1b09edea8ce794496fbdc988eeff7a, type: 3}
   MeleeSwordSwingSFX: {fileID: 8300000, guid: 27a5e00c79dafd54bb12c207daca4204, type: 3}
@@ -167,8 +163,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.5
-  m_Center: {x: 0.000000059604645, y: -1, z: -0.00000008940697}
+  m_Radius: 10
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3081134813984358481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,19 +180,6 @@ MonoBehaviour:
   RequiredBricks: 10
   RequiredGolds: 5
   RequiredDiamonds: 2
---- !u!135 &7186662852261531367
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5424123895397131196}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 2.5
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!208 &693321153
 NavMeshObstacle:
   m_ObjectHideFlags: 0

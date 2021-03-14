@@ -9,7 +9,7 @@ public class EnemyHealth : MonoBehaviour
     public GameObject EnemyRef;
     GameObject CamRef;
 
-    float Health;
+    public float Health;
 
     //audio
     [Header("Audio")]
@@ -28,15 +28,13 @@ public class EnemyHealth : MonoBehaviour
 
     void Update()
     {
-        // test purpose
-        if (Time.frameCount % 120 == 0)
-        {
-            TakeDamage(2);
-            // AudioSource.PlayClipAtPoint(GenericDamageSFX, transform.position);
-            // Debug.Log("Enemy pew!");
-        }
-
-
+        //// test purpose
+        //if (Time.frameCount % 120 == 0)
+        //{
+        //    TakeDamage(2);
+        //    // AudioSource.PlayClipAtPoint(GenericDamageSFX, transform.position);
+        //    // Debug.Log("Enemy pew!");
+        //}
 
         // Roatate healthbar if its not parallel to canvas
         if (transform.rotation != Quaternion.Euler(-45f, 90f, 0f))
@@ -49,34 +47,19 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    void TakeDamage(int damage)
+    public bool TakeDamage(int damage)
     {
-        if (Health > 1)
+        // reduce health and update healthbar length
+        Health -= damage;
+        HealthBarContainerRef.transform.localScale = new Vector3(1f * (Health / 100f), HealthBarContainerRef.transform.localScale.y, HealthBarContainerRef.transform.localScale.z);
+
+        if (Health > 0)
         {
-            // reduce health and update healthbar length
-            Health -= damage;
-            HealthBarContainerRef.transform.localScale = new Vector3(
-                1f * (Health / 100f),
-                HealthBarContainerRef.transform.localScale.y,
-                HealthBarContainerRef.transform.localScale.z
-            );
-
-
-
             // change health bar color along with current health
-            if(Health <= 30)
-            {
+            if (Health <= 30)
                 gameObject.transform.Find("Container").transform.Find("HealthBar").GetComponent<Renderer>().material.SetColor("_Color", Color.red);
-                
-            }
             else if (Health <= 60 && Health > 30)
-            {
                 gameObject.transform.Find("Container").transform.Find("HealthBar").GetComponent<Renderer>().material.SetColor("_Color", Color.yellow);
-            }
-
-
-            
-
         }
         else
         {
@@ -86,7 +69,7 @@ public class EnemyHealth : MonoBehaviour
             ResourceInventorySystem.gold += 9;
             ResourceInventorySystem.diamond += 3;
 
-            AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
+            //AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
 
             if (ResourceInventorySystem.bricks >= 10 && ResourceInventorySystem.gold >= 5 &&
                   ResourceInventorySystem.diamond >= 2)
@@ -99,6 +82,10 @@ public class EnemyHealth : MonoBehaviour
                 ToggleBoard.buildText.color = Color.red;
                 ToggleBoard.buildText.text = "Can not build.";
             }
+
+            return true; //enemy died
         }
+
+        return false; //enemy still alive
     }
 }
