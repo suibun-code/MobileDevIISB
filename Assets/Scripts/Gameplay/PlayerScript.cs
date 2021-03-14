@@ -132,11 +132,13 @@ public class PlayerScript : MonoBehaviour
     // Also updating the healthbar and trigger death event
     void TakeDamage(float damage)
     {
+        AudioSource.PlayClipAtPoint(TakeDamageSFX, transform.position);
+        Debug.Log("WHACK");
         if (Health > 0)
         {
             //audio
             AudioSource.PlayClipAtPoint(TakeDamageSFX, transform.position);
-            // Debug.Log("BOOM");
+             Debug.Log("BOOM");
 
             // set health value 
             Health -= damage;
@@ -168,13 +170,20 @@ public class PlayerScript : MonoBehaviour
 
             // update the new health value to the indicator
             HealthBarIndicator.GetComponent<TextMesh>().text = Health.ToString();
-        }
+
+            if (Health <= 0)
+            {
+                //audio
+                AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
+                Debug.Log("Player DESTROYED!");
+            }
         else
         {
-            //audio
-            AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
+                //audio
+                AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
+                Debug.Log("DESTROYED!");
 
-            // Player Dies and goto the result screen
-        }
+                // Player Dies and goto the result screen
+            }
     }
 }
