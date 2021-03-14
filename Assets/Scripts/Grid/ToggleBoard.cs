@@ -27,8 +27,8 @@ public class ToggleBoard : MonoBehaviour
         sniperBtn.SetActive(false);
         canonBtn.SetActive(false);
 
-        if (ResourceInventorySystem.bricks >= 10 && ResourceInventorySystem.gold >= 5 &&
-            ResourceInventorySystem.diamond >= 2)
+        if (ResourceInventorySystem.bricks >= 5 && ResourceInventorySystem.gold >= 3 &&
+            ResourceInventorySystem.diamond >= 1)
         {
             ToggleBoard.buildText.color = Color.green;
             ToggleBoard.buildText.text = "Can build.";
@@ -50,8 +50,8 @@ public class ToggleBoard : MonoBehaviour
         }
         else
         {
-            if (!(ResourceInventorySystem.bricks >= 10 && ResourceInventorySystem.gold >= 5 &&
-                  ResourceInventorySystem.diamond >= 2))
+            if (!(ResourceInventorySystem.bricks >= 5 && ResourceInventorySystem.gold >= 3 &&
+                  ResourceInventorySystem.diamond >= 1))
             {
                 Debug.Log("You don't meet the resource requirement to build a tower!");
                 return;
