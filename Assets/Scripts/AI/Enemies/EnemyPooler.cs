@@ -4,19 +4,40 @@ using UnityEngine;
 
 public class EnemyPooler : MonoBehaviour
 {
-    public Dictionary<string, Queue<GameObject>> poolDictionary;
     [SerializeField]
     public GameObject Archer;
-    public GameObject Mummy;
     public GameObject Swordsmen;
     public GameObject Wizard;
+    public GameObject Mummy;
+    public GameObject enemy;
+    private enum eEnemies
+    {
+        Archer,
+        Swordsmen,
+        Wizard,
+        Mummy
+    }
+    
+    [System.Serializable]
+    public class Pool
+    {
+        public string tag;
+        public GameObject e;
+        public int size;
+    }
 
-    //public class Pool
+    public Dictionary<string, Queue<GameObject>> poolDictionary;
 
     // Start is called before the first frame update
     void Start()
     {
-        poolDictionary  = new Dictionary<string, Queue<GameObject>>();    
+        //public List<Pool> pools;
+        poolDictionary = new Dictionary<string, Queue<GameObject>>();
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        int enemy = Random.Range(1, 4);
+    }
 }
