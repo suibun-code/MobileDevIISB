@@ -2799,6 +2799,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2953587387875833317, guid: 2932fa43a3aaec94db36d52cc77398a1, type: 3}
+      propertyPath: DestroyedSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 14d3f0a425dbacf42800eff9de87899c, type: 3}
+    - target: {fileID: 2953587387875833317, guid: 2932fa43a3aaec94db36d52cc77398a1, type: 3}
+      propertyPath: GenericDamageSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 4b56377201c567e45b53f53724e0e26f, type: 3}
+    - target: {fileID: 2953587387875833317, guid: 2932fa43a3aaec94db36d52cc77398a1, type: 3}
+      propertyPath: EnemyHitWithArrowSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 1f61e1b39dde39a43a102903be1d1cee, type: 3}
+    - target: {fileID: 2953587387875833317, guid: 2932fa43a3aaec94db36d52cc77398a1, type: 3}
+      propertyPath: EnemyHitWithMagicSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: bf17fcedcde04d8499278a632dcd13e7, type: 3}
+    - target: {fileID: 2953587387875833317, guid: 2932fa43a3aaec94db36d52cc77398a1, type: 3}
+      propertyPath: EnemyHitWithPunchSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 8a3b91f548352894993f6f27a82c6d6f, type: 3}
+    - target: {fileID: 2953587387875833317, guid: 2932fa43a3aaec94db36d52cc77398a1, type: 3}
+      propertyPath: EnemyHitWithSwordSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 995bc507646f92742933047f8fea4244, type: 3}
     - target: {fileID: 2998313999713152807, guid: 2932fa43a3aaec94db36d52cc77398a1, type: 3}
       propertyPath: m_Name
       value: Archer-m (1)
