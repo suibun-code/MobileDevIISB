@@ -37,5 +37,6 @@ public class OnEnemyDestroy : MonoBehaviour
 
        
         AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
+        Debug.Log("Enemy Destroyed");
     }
 }

@@ -20,10 +20,16 @@ public class EnemyHealth : MonoBehaviour
     public AudioClip EnemyHitWithSwordSFX;
     public AudioClip GenericDamageSFX;
 
+    public float maxHealth;
+    public float currentHealth;
+
     void Start()
     {
         CamRef = GameObject.FindGameObjectWithTag("MainCamera");
         Health = 100f;
+
+        
+        
     }
 
     void Update()
@@ -34,6 +40,11 @@ public class EnemyHealth : MonoBehaviour
         //    TakeDamage(2);
         //    // AudioSource.PlayClipAtPoint(GenericDamageSFX, transform.position);
         //    // Debug.Log("Enemy pew!");
+        
+
+        //if (currentHealth <= maxHealth)
+        //{
+        //    AudioSource.PlayClipAtPoint(GenericDamageSFX, transform.position);
         //}
 
         // Roatate healthbar if its not parallel to canvas
@@ -53,6 +64,8 @@ public class EnemyHealth : MonoBehaviour
         Health -= damage;
         HealthBarContainerRef.transform.localScale = new Vector3(1f * (Health / 100f), HealthBarContainerRef.transform.localScale.y, HealthBarContainerRef.transform.localScale.z);
 
+        
+
         if (Health > 0)
         {
             // change health bar color along with current health
@@ -69,7 +82,7 @@ public class EnemyHealth : MonoBehaviour
             ResourceInventorySystem.gold += 9;
             ResourceInventorySystem.diamond += 3;
 
-            //AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
+            AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
 
             if (ResourceInventorySystem.bricks >= 10 && ResourceInventorySystem.gold >= 5 &&
                   ResourceInventorySystem.diamond >= 2)
@@ -84,6 +97,7 @@ public class EnemyHealth : MonoBehaviour
             }
 
             return true; //enemy died
+        
         }
 
         return false; //enemy still alive
