@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TowerInformation;
-
+public enum TowerToBuild
+{
+    Sniper = 0,
+    Canon = 1
+}
 public class TowerManager3 : MonoBehaviour
 {
     [SerializeField]
@@ -26,12 +29,12 @@ public class TowerManager3 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             towerToBuild = TowerToBuild.Sniper;
-            Debug.Log("Now building sniper towers.");
+            // Debug.Log("Now building sniper towers.");
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             towerToBuild = TowerToBuild.Canon;
-            Debug.Log("Now building canon towers.");
+            // Debug.Log("Now building canon towers.");
         }
     }
 

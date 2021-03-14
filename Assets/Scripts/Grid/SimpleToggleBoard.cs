@@ -7,6 +7,8 @@ public class SimpleToggleBoard : MonoBehaviour
 
     GameObject board;
 
+
+
     void Start() 
     {
         board = GameObject.FindGameObjectWithTag("Board");    
@@ -24,4 +26,5 @@ public class SimpleToggleBoard : MonoBehaviour
         }
 
     }
+
 }

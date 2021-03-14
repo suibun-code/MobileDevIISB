@@ -10,9 +10,9 @@ public enum CellState
 public class Board : MonoBehaviour
 {
     [SerializeField]
-    public static int CellSizeZ = 32;
+    public static int CellSizeZ = 24;
     [SerializeField]
-    public static int CellSizeX = 12;
+    public static int CellSizeX = 10;
 
     public GameObject cellPrefab;
     public Cell[,] allCells = new Cell[CellSizeX, CellSizeZ];
@@ -27,7 +27,7 @@ public class Board : MonoBehaviour
                 GameObject newCell = Instantiate(cellPrefab, transform);
 
                 RectTransform rectTransform = newCell.GetComponent<RectTransform>();
-                rectTransform.position = new Vector3((j * 4) - 22f, rectTransform.position.y, (i * 4) - 62f);
+                rectTransform.position = new Vector3((j * 4) - 14.5f, rectTransform.position.y, (i * 4) - 60f);
 
                 allCells[j, i] = newCell.GetComponent<Cell>();
                 allCells[j, i].Setup(new Vector2Int(j, i), this);
