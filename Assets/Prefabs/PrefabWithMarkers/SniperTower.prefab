@@ -99,7 +99,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ca6433f4f8331b34dbd0ba8ea5355432, type: 2}
+  - {fileID: 2100000, guid: 2fafa709f2e7f7e4faf4b63f95a57f2a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -372,7 +372,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ca6433f4f8331b34dbd0ba8ea5355432, type: 2}
+  - {fileID: 2100000, guid: 2fafa709f2e7f7e4faf4b63f95a57f2a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -468,7 +468,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ca6433f4f8331b34dbd0ba8ea5355432, type: 2}
+  - {fileID: 2100000, guid: 2fafa709f2e7f7e4faf4b63f95a57f2a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -588,15 +588,15 @@ PrefabInstance:
     - target: {fileID: 1285281162419778470, guid: 3b426c13f37846243917e18224b00ce7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ca6433f4f8331b34dbd0ba8ea5355432, type: 2}
+      objectReference: {fileID: 2100000, guid: 2fafa709f2e7f7e4faf4b63f95a57f2a, type: 2}
     - target: {fileID: 1782328847591690366, guid: 3b426c13f37846243917e18224b00ce7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ca6433f4f8331b34dbd0ba8ea5355432, type: 2}
+      objectReference: {fileID: 2100000, guid: 2fafa709f2e7f7e4faf4b63f95a57f2a, type: 2}
     - target: {fileID: 4574118973520725369, guid: 3b426c13f37846243917e18224b00ce7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ca6433f4f8331b34dbd0ba8ea5355432, type: 2}
+      objectReference: {fileID: 2100000, guid: 2fafa709f2e7f7e4faf4b63f95a57f2a, type: 2}
     - target: {fileID: 4886968521481832533, guid: 3b426c13f37846243917e18224b00ce7, type: 3}
       propertyPath: m_Name
       value: Eagle
@@ -664,11 +664,11 @@ PrefabInstance:
     - target: {fileID: 6454663979369822741, guid: 3b426c13f37846243917e18224b00ce7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ca6433f4f8331b34dbd0ba8ea5355432, type: 2}
+      objectReference: {fileID: 2100000, guid: 2fafa709f2e7f7e4faf4b63f95a57f2a, type: 2}
     - target: {fileID: 8075189150409335755, guid: 3b426c13f37846243917e18224b00ce7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ca6433f4f8331b34dbd0ba8ea5355432, type: 2}
+      objectReference: {fileID: 2100000, guid: 2fafa709f2e7f7e4faf4b63f95a57f2a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b426c13f37846243917e18224b00ce7, type: 3}
 --- !u!4 &4107223351576904991 stripped
