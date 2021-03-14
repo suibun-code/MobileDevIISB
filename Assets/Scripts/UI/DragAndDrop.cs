@@ -15,8 +15,6 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 
 
 
-
-
     // Variables
     public int TowerType;
     bool Available;
@@ -61,7 +59,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     {   
         if (Available)
         {
-            print("Startdrag");
+            // print("Startdrag");
 
             // show the board
             SimpleToggleBoardRef.Toggle();
@@ -84,7 +82,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     {
         if (Available)
         {
-            print("Enddrag");
+            // print("Enddrag");
 
             // reset icon position
             rectTransform.anchoredPosition = StartAnchoredPosition;

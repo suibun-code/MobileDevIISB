@@ -7,6 +7,9 @@ public class SimpleToggleBoard : MonoBehaviour
 
     GameObject board;
 
+    public GameObject SniperTowerRef;
+
+
     void Start() 
     {
         board = GameObject.FindGameObjectWithTag("Board");    
