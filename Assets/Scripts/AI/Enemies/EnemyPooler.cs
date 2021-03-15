@@ -50,7 +50,7 @@ public class EnemyPooler : MonoBehaviour
         foreach (Pool pool in pools)
         {
             Queue<GameObject> objectPool = new Queue<GameObject>();
-            for (int i = 0; i < pool.size; i++)
+            for (int i = 0; i < 1; i++)
             {
                 int enemy = Random.Range(0, 3);
                 Debug.Log (enemy);
@@ -74,8 +74,8 @@ public class EnemyPooler : MonoBehaviour
                         break;
 
                 }
-                GameObject obj = Instantiate(pool.e, new Vector3(0,0,0), Quaternion.identity);
-                obj.SetActive(false);
+                GameObject obj = Instantiate(pool.e, transform.position, Quaternion.identity);
+                obj.SetActive(true);
                 objectPool.Enqueue(obj);
             }
            // poolDictionary.Add(pool.tag, objectPool);

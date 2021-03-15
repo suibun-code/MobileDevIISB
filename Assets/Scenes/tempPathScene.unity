@@ -860,7 +860,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3833142787077460406, guid: fb9e7ae7802379b4f97fba4e193f7b8d, type: 3}
       propertyPath: pools.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4762351588885542229, guid: fb9e7ae7802379b4f97fba4e193f7b8d, type: 3}
       propertyPath: m_RootOrder
@@ -876,7 +876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4762351588885542229, guid: fb9e7ae7802379b4f97fba4e193f7b8d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -25.64
+      value: -66.97
       objectReference: {fileID: 0}
     - target: {fileID: 4762351588885542229, guid: fb9e7ae7802379b4f97fba4e193f7b8d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3832,6 +3832,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2027311542987535513, guid: 3408cfe196b56f441ab2ab3dfcdf20a8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6495647570770269452, guid: 3408cfe196b56f441ab2ab3dfcdf20a8, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
