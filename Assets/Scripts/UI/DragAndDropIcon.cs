@@ -114,11 +114,11 @@ public class DragAndDropIcon : MonoBehaviour, IPointerDownHandler, IBeginDragHan
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 200.0f))
             {
-                if (hit.transform != null)
+                if (hit.transform != null && hit.transform.gameObject.tag == "Cell")
                 {
                     // print("hit");
                     // print(hit.transform.gameObject.transform.position);
-                    print(hit.transform.gameObject.name);
+                    print(hit.transform.gameObject.tag);
 
 
                     // get cell

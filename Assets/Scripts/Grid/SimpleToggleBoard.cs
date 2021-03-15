@@ -5,13 +5,13 @@ using UnityEngine;
 public class SimpleToggleBoard : MonoBehaviour
 {
 
-    GameObject board;
+    public GameObject board;
 
 
 
     void Start() 
     {
-        board = GameObject.FindGameObjectWithTag("Board");    
+        // board = GameObject.FindGameObjectWithTag("GameBoard");    
     }
 
     public void Toggle()
