@@ -4,7 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public class CobraTowerAI : MonoBehaviour
 {
-    private List<GameObject> currentTargets = new List<GameObject>(10);
+    [SerializeField] private GameObject currentTarget;
     public Transform sphereTransform;
 
     private SphereCollider colliderRange;
@@ -15,8 +15,8 @@ public class CobraTowerAI : MonoBehaviour
     private float timer;
     private LineRenderer lineRender;
 
-    [Header("Audio")]
     //Audio
+    [Header("Audio")]
     public AudioClip ShootingMagicSFX;
     public AudioClip ShootingArrowSFX;
     public AudioClip MeleeSwordSwingSFX;
@@ -32,23 +32,20 @@ public class CobraTowerAI : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        //Target();
-
-        //if (currentTargets.Count != 0)
-        //FollowTarget();
-        //else
-        //    WanderAim();
-
-        if (timer >= shotCoolDown)
-        {
+        if (currentTarget == null)
             Target();
-            timer = 0;
-        }
-    }
 
-    void OnCollisionEnter()
-    {
+        if (currentTarget != null)
+            FollowTarget();
+        else
+            WanderAim();
 
+            if (timer >= shotCoolDown)
+            if (currentTarget != null)
+            {
+                Shoot();
+                timer = 0;
+            }
     }
 
     private void Target()
@@ -60,27 +57,29 @@ public class CobraTowerAI : MonoBehaviour
         {
             if (colliders[i].tag == "Enemy")
             {
-                if (!currentTargets.Contains(colliders[i].gameObject))
-                    currentTargets.Add(colliders[i].gameObject);
+                float sqrDistanceToCenter = ((colliderRange.transform.position - (colliderRange.center * transform.localScale.x)) - colliders[i].transform.position).sqrMagnitude;
+
+                if (sqrDistanceToCenter < minSqrDistance)
+                {
+                    minSqrDistance = sqrDistanceToCenter;
+                    currentTarget = colliders[i].gameObject;
+                }
             }
         }
-
-        if (currentTargets.Count != 0)
-            Shoot();
     }
 
-    //private void FollowTarget()
-    //{
-    //    Vector3 targetDir = currentTargets[0].transform.position - transform.position;
-    //    sphereTransform.forward = targetDir;
-    //    RaycastHit hit;
+    private void FollowTarget()
+    {
+        Vector3 targetDir = currentTarget.transform.position - transform.position;
+        sphereTransform.forward = targetDir;
+        RaycastHit hit;
 
-    //    if (Physics.Raycast(sphereTransform.forward, transform.forward, out hit))
-    //        if (hit.collider)
-    //            lineRender.SetPosition(1, new Vector3(0, 0, hit.distance));
+        if (Physics.Raycast(sphereTransform.forward, transform.forward, out hit))
+            if (hit.collider)
+                lineRender.SetPosition(1, new Vector3(0, 0, hit.distance));
 
-    //    Debug.DrawLine(sphereTransform.transform.position, currentTargets[0].transform.position, Color.red);
-    //}
+        Debug.DrawLine(sphereTransform.transform.position, currentTarget.transform.position, Color.red);
+    }
 
     private void WanderAim()
     {
@@ -93,23 +92,7 @@ public class CobraTowerAI : MonoBehaviour
         AudioSource.PlayClipAtPoint(ShootingArrowSFX, transform.position);
 
         Debug.Log("Shoot");
-        Debug.Log(currentTargets.Count);
 
-        for (int i = 0; i < currentTargets.Count; i++)
-            if (currentTargets[i] != null)
-                currentTargets[i].transform.Find("EnemyHealthBar").GetComponent<EnemyHealth>().TakeDamage(damage);
-
-        currentTargets.Clear();
-    }
-
-    public bool EmptyList()
-    {
-        for (int i = 0; i < currentTargets.Count; i++)
-        {
-            if (currentTargets[i] != null)
-                return false;
-        }
-
-        return true;
+        currentTarget.transform.Find("EnemyHealthBar").GetComponent<EnemyHealth>().TakeDamage(damage);
     }
 }

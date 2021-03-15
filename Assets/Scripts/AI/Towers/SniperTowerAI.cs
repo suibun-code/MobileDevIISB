@@ -21,10 +21,14 @@ public class SniperTowerAI : MonoBehaviour
     public AudioClip ShootingArrowSFX;
     public AudioClip MeleeSwordSwingSFX;
 
-    void Awake()
+
+    // Start is called before the first frame update
+    void Start()
     {
         colliderRange = GetComponent<SphereCollider>();
         lineRender = GetComponent<LineRenderer>();
+
+        Target();
     }
 
     // Update is called once per frame
