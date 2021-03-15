@@ -9,7 +9,6 @@ public class DragAndDropIcon : MonoBehaviour, IPointerDownHandler, IBeginDragHan
     public Canvas canvasRef;
     public GameObject TargetTower;
     RectTransform rectTransform;
-    TowerManager3 TManagerRef;
     SimpleToggleBoard SimpleToggleBoardRef;
     ResourceInventorySystem InventorySystemRef;
     TowerInfo TInfo;
@@ -27,7 +26,6 @@ public class DragAndDropIcon : MonoBehaviour, IPointerDownHandler, IBeginDragHan
 
 
         // set references
-        TManagerRef = GameObject.FindGameObjectWithTag("ResourceIndicator").GetComponent<TowerManager3>();
         InventorySystemRef = GameObject.FindGameObjectWithTag("TowerManager").GetComponent<ResourceInventorySystem>();
         rectTransform = GetComponent<RectTransform>();
         SimpleToggleBoardRef = gameObject.transform.parent.GetComponent<SimpleToggleBoard>();
@@ -46,15 +44,30 @@ public class DragAndDropIcon : MonoBehaviour, IPointerDownHandler, IBeginDragHan
         && ResourceInventorySystem.diamond > TInfo.RequiredDiamonds;
 
         if (canbuild)
+        {
             Available = true;
+        }
         else
+        {
             Available = false;
+        }
 
         //  set icon alpha
         if (Available)
-            SetIconAvaliable();
+        {
+            if(isDragging)
+            {
+                SetIconDisable();
+            }
+            else
+            {
+                SetIconAvaliable();
+            }
+        }
         else
+        {
             SetIconDisable();
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -69,8 +82,11 @@ public class DragAndDropIcon : MonoBehaviour, IPointerDownHandler, IBeginDragHan
     {
         if (Available)
         {
+            isDragging = true;
+
             // show the board
             SimpleToggleBoardRef.Toggle();
+            
         }
     }
 
@@ -102,6 +118,8 @@ public class DragAndDropIcon : MonoBehaviour, IPointerDownHandler, IBeginDragHan
                 {
                     // print("hit");
                     // print(hit.transform.gameObject.transform.position);
+                    print(hit.transform.gameObject.name);
+
 
                     // get cell
                     Cell cellRef = hit.transform.gameObject.GetComponent<Cell>();
@@ -121,8 +139,11 @@ public class DragAndDropIcon : MonoBehaviour, IPointerDownHandler, IBeginDragHan
                     }
                 }
             }
+            isDragging = false;
+
             // hide the board
             SimpleToggleBoardRef.Toggle();
+
 
         }
     }
