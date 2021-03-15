@@ -111,7 +111,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687061744756878883}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 3.08, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 8294711871955891819}
@@ -145,8 +145,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 12
-  m_Center: {x: 0, y: 0, z: 13}
+  m_Radius: 8
+  m_Center: {x: 0, y: 0, z: 9}
 --- !u!208 &4405727506123842358
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -175,9 +175,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bf94a04bc921f149b4dde36757a4ea9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequiredBricks: 13
-  RequiredGolds: 5
-  RequiredDiamonds: 3
+  RequiredBricks: 8
+  RequiredGolds: 2
+  RequiredDiamonds: 0
 --- !u!120 &6495647570770269452
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -289,8 +289,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphereTransform: {fileID: 8717090288458361107}
-  damage: 75
-  shotCoolDown: 3
+  damage: 20
+  shotCoolDown: 1.5
   ShootingMagicSFX: {fileID: 8300000, guid: 8f3918b0e0561ff40aaa912f7ed16bb5, type: 3}
   ShootingArrowSFX: {fileID: 8300000, guid: 8f3918b0e0561ff40aaa912f7ed16bb5, type: 3}
   MeleeSwordSwingSFX: {fileID: 8300000, guid: 27a5e00c79dafd54bb12c207daca4204, type: 3}
