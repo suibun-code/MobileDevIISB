@@ -82,7 +82,7 @@ public class EnemyHealth : MonoBehaviour
             ResourceInventorySystem.gold += 2;
             ResourceInventorySystem.diamond += 1;
 
-            AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
+            //AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
 
             if (ResourceInventorySystem.bricks >= 10 && ResourceInventorySystem.gold >= 5 &&
                   ResourceInventorySystem.diamond >= 2)

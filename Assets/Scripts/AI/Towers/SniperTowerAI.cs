@@ -21,14 +21,10 @@ public class SniperTowerAI : MonoBehaviour
     public AudioClip ShootingArrowSFX;
     public AudioClip MeleeSwordSwingSFX;
 
-
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         colliderRange = GetComponent<SphereCollider>();
         lineRender = GetComponent<LineRenderer>();
-
-        Target();
     }
 
     // Update is called once per frame
@@ -54,14 +50,14 @@ public class SniperTowerAI : MonoBehaviour
 
     private void Target()
     {
-        Collider[] colliders = Physics.OverlapSphere(colliderRange.transform.position, colliderRange.radius * Mathf.PI);
+        Collider[] colliders = Physics.OverlapSphere(colliderRange.transform.position - (colliderRange.center * transform.localScale.x), colliderRange.radius * transform.localScale.x);
         float minSqrDistance = Mathf.Infinity;
 
         for (int i = 0; i < colliders.Length; i++)
         {
             if (colliders[i].tag == "Enemy")
             {
-                float sqrDistanceToCenter = (colliderRange.transform.position - colliders[i].transform.position).sqrMagnitude;
+                float sqrDistanceToCenter = ((colliderRange.transform.position - (colliderRange.center * transform.localScale.x)) - colliders[i].transform.position).sqrMagnitude;
 
                 if (sqrDistanceToCenter < minSqrDistance)
                 {

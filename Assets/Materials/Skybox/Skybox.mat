@@ -79,7 +79,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     - _mult: 1
-    - _pwer: 8.5
+    - _pwer: 10
     m_Colors:
     - _Bottom: {r: 0.13333333, g: 0.6369574, b: 0.8509804, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}

@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 2931001469924121824}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -370,7 +370,7 @@ Transform:
   m_GameObject: {fileID: 5040037294473334730}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 62.84}
-  m_LocalScale: {x: 5.7583, y: 5.4851, z: 6.0854}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 4328861002667716921}
   - {fileID: 3276498009923234084}
@@ -453,10 +453,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthBarContainer: {fileID: 7116679294415389102}
   HealthBarIndicator: {fileID: 4336749589008240922}
-  SpendCurrencySFX: {fileID: 0}
-  UpgradeTowerSFX: {fileID: 0}
-  DestroyedSFX: {fileID: 0}
-  TakeDamageSFX: {fileID: 0}
+  SpendCurrencySFX: {fileID: 8300000, guid: 052417fb74ff5894bacdcd548ad6e9e5, type: 3}
+  UpgradeTowerSFX: {fileID: 8300000, guid: 4661c9e0b207ec24898d07108c8cc712, type: 3}
+  DestroyedSFX: {fileID: 8300000, guid: 14d3f0a425dbacf42800eff9de87899c, type: 3}
+  TakeDamageSFX: {fileID: 8300000, guid: 40d03d043cd200c439a5c0337cfd344a, type: 3}
+  SceneName: GameResult
 --- !u!54 &2931001469924121824
 Rigidbody:
   m_ObjectHideFlags: 0
