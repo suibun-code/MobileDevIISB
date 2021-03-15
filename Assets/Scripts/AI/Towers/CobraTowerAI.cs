@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
-public class SniperTowerAI : MonoBehaviour
+public class CobraTowerAI : MonoBehaviour
 {
     [SerializeField] private GameObject currentTarget;
     public Transform sphereTransform;
@@ -21,14 +21,10 @@ public class SniperTowerAI : MonoBehaviour
     public AudioClip ShootingArrowSFX;
     public AudioClip MeleeSwordSwingSFX;
 
-
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         colliderRange = GetComponent<SphereCollider>();
         lineRender = GetComponent<LineRenderer>();
-
-        Target();
     }
 
     // Update is called once per frame
