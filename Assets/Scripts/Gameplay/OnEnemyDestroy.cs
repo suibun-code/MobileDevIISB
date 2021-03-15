@@ -26,6 +26,8 @@ public class OnEnemyDestroy : MonoBehaviour
         ps = player.GetComponent<PlayerScript>();
     }
 
+
+    
     private void OnDestroy()
     {
         // when enemy gets destroyed, add resource to player script
@@ -33,6 +35,7 @@ public class OnEnemyDestroy : MonoBehaviour
         // ps.GainResource_Diamond(-10);
         // ps.GainResource_Bricks(10);
 
+       
         AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
         Debug.Log("Enemy Destroyed");
     }

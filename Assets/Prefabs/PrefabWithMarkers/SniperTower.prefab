@@ -148,7 +148,7 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   sphereTransform: {fileID: 8920350510590944775}
   damage: 50
-  shotCoolDown: 2.5
+  shotCoolDown: 1
   ShootingMagicSFX: {fileID: 8300000, guid: 8f3918b0e0561ff40aaa912f7ed16bb5, type: 3}
   ShootingArrowSFX: {fileID: 8300000, guid: cf1b09edea8ce794496fbdc988eeff7a, type: 3}
   MeleeSwordSwingSFX: {fileID: 8300000, guid: 27a5e00c79dafd54bb12c207daca4204, type: 3}
@@ -321,7 +321,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8114458075908975041}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.75, z: 0}
+  m_LocalPosition: {x: 0, y: 0.742, z: -0.004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7487431172956531475}
