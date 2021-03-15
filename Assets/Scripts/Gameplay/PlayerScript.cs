@@ -30,6 +30,7 @@ public class PlayerScript : MonoBehaviour
     public AudioClip DestroyedSFX;
     public AudioClip TakeDamageSFX;
 
+    EnemyPooler enemyPool;
 
     void Start()
     {
@@ -42,6 +43,8 @@ public class PlayerScript : MonoBehaviour
         //DiamondResourcesCount = 0;
         //GoldResourcesCount = 0;
         //BricksResourcesCount = 0;
+
+        enemyPool = EnemyPooler.Instance;
     }
 
     void Update()
@@ -93,6 +96,8 @@ public class PlayerScript : MonoBehaviour
         {
             AudioSource.PlayClipAtPoint(TakeDamageSFX, transform.position);
             Destroy(other.gameObject);
+            //EnemyPooler.poolDictionary[Enemy].Enqueue(objectToSpawn);
+
             TakeDamage(10.0f);
             // print("Take 10 damage");
         }

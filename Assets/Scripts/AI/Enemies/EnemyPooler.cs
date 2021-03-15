@@ -91,7 +91,7 @@ public class EnemyPooler : MonoBehaviour
         }
         GameObject objectToSpawn = poolDictionary[tag].Dequeue();
 
-        objectToSpawn.SetActive(true);
+        objectToSpawn.SetActive(false);
         objectToSpawn.transform.position = position;
         objectToSpawn.transform.rotation = rotation;
 
