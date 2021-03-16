@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2905898772081881084}
   - component: {fileID: 5885784810302101858}
   - component: {fileID: 2641519451822753213}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 4405727506123842359}
   - component: {fileID: 6495647570770269452}
   - component: {fileID: -7976253736878428099}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sphynx Ice Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 2761777828344324755}
   - component: {fileID: 9141169029326039242}
   - component: {fileID: 1075865460917249989}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 10675_KingCobra_v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

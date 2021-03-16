@@ -29,10 +29,10 @@ public class MoveTo : MonoBehaviour
 
         yield return new WaitForSeconds(secondsToFreeze);
         
+        // if enemy distroyed dont access the agent
         if (agent != null)
         {
             agent.speed = speed;
-            
         }
     }
 }

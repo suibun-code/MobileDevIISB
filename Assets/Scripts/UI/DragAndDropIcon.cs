@@ -129,7 +129,7 @@ public class DragAndDropIcon : MonoBehaviour, IPointerDownHandler, IBeginDragHan
                     {
 
                         // spawn tower in the designated cell
-                        Instantiate(TargetTower, new Vector3(cellRef.transform.position.x, 3.0f, cellRef.transform.position.z), TargetTower.transform.rotation);
+                        Instantiate(TargetTower, new Vector3(cellRef.transform.position.x, 1.5f, cellRef.transform.position.z), TargetTower.transform.rotation);
 
                         // set that cell's tower to the tower spawned
                         cellRef.currentTower = TargetTower.GetComponent<Tower>();
