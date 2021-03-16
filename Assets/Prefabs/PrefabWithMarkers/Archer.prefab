@@ -374,6 +374,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7292684297461589926}
     - target: {fileID: 5712469980415485192, guid: 7617c78e1d32e2942b3f3b66cc827e51, type: 3}
+      propertyPath: deathParticle
+      value: 
+      objectReference: {fileID: 100004, guid: 8d8c3ce0a8226854bb5fac9304ec8669, type: 3}
+    - target: {fileID: 5712469980415485192, guid: 7617c78e1d32e2942b3f3b66cc827e51, type: 3}
       propertyPath: HealthBarContainerRef
       value: 
       objectReference: {fileID: 174871876510304425}

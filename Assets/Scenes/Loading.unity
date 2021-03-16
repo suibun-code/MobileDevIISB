@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadingBar: {fileID: 1612103502}
-  SceneName: tempPathScene
+  SceneName: GameScene
 --- !u!1 &803060183
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,6 +20,10 @@ public class EnemyHealth : MonoBehaviour
     public AudioClip EnemyHitWithSwordSFX;
     public AudioClip GenericDamageSFX;
 
+    // Particle
+    [Header("Particle")]
+    public GameObject deathParticle;
+
     public float maxHealth;
     public float currentHealth;
 
@@ -76,6 +80,9 @@ public class EnemyHealth : MonoBehaviour
         }
         else
         {
+            // enemy destroy particle
+            Instantiate(deathParticle, EnemyRef.transform.position, Quaternion.identity);
+
             // destroy enemy
             Destroy(EnemyRef);
             ResourceInventorySystem.bricks += 5;

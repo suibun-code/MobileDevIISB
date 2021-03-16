@@ -327,6 +327,10 @@ PrefabInstance:
       propertyPath: EnemyRef
       value: 
       objectReference: {fileID: 6025897932876148502}
+    - target: {fileID: 5712469980415485192, guid: 7617c78e1d32e2942b3f3b66cc827e51, type: 3}
+      propertyPath: deathParticle
+      value: 
+      objectReference: {fileID: 100004, guid: 8d8c3ce0a8226854bb5fac9304ec8669, type: 3}
     - target: {fileID: 8832351277870090056, guid: 7617c78e1d32e2942b3f3b66cc827e51, type: 3}
       propertyPath: m_Name
       value: EnemyHealthBar
