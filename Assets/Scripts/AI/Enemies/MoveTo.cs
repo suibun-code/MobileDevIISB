@@ -28,7 +28,11 @@ public class MoveTo : MonoBehaviour
         agent.speed = 0;
 
         yield return new WaitForSeconds(secondsToFreeze);
-
-        agent.speed = speed;
+        
+        if (agent != null)
+        {
+            agent.speed = speed;
+            
+        }
     }
 }
