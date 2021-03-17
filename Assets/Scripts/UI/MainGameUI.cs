@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MainGameUI : MonoBehaviour
 {
     public GameObject optionPanel;
+    public GameObject pausePanel;
 
     public void OptionOpen()
     {
@@ -15,6 +16,17 @@ public class MainGameUI : MonoBehaviour
     public void OptionClose()
     {
         optionPanel.SetActive(false);
+        Time.timeScale = 1.0f;
+    }
+
+    public void PauseOpen()
+    {
+        pausePanel.SetActive(true);
+        Time.timeScale = 0.0f;
+    }
+    public void PauseClose()
+    {
+        pausePanel.SetActive(false);
         Time.timeScale = 1.0f;
     }
 }
