@@ -710,6 +710,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1640caf0b014043923d958bfb8498b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWin: 0
+  score: 0
 --- !u!4 &499455716
 Transform:
   m_ObjectHideFlags: 0
@@ -3209,7 +3211,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Game Start
+  m_Text: Start New Game
 --- !u!222 &1465192843
 CanvasRenderer:
   m_ObjectHideFlags: 0

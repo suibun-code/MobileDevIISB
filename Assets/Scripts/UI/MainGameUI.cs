@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainGameUI : MonoBehaviour
 {
@@ -28,5 +29,9 @@ public class MainGameUI : MonoBehaviour
     {
         pausePanel.SetActive(false);
         Time.timeScale = 1.0f;
+    }
+    public void MainMenu()
+    {
+        GameManager.Instance.ChangeScene("MainMenu");
     }
 }
