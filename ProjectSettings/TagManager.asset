@@ -11,6 +11,9 @@ TagManager:
   - Board
   - Cell
   - ResourceIndicator
+  - FxTemporaire
+  - Seconds
+  - Minutes
   layers:
   - Default
   - TransparentFX
