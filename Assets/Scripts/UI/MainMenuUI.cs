@@ -43,6 +43,7 @@ public class MainMenuUI : MonoBehaviour
     }
     public void LoadButton()
     {
+        SaveManager.Instance.Load();
         GameManager.Instance.ChangeScene("Loading");
     }
 

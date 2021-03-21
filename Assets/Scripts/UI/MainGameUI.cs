@@ -8,6 +8,7 @@ public class MainGameUI : MonoBehaviour
 {
     public GameObject optionPanel;
     public GameObject pausePanel;
+    public GameObject saveText;
 
     public void OptionOpen()
     {
@@ -18,6 +19,13 @@ public class MainGameUI : MonoBehaviour
     {
         optionPanel.SetActive(false);
         Time.timeScale = 1.0f;
+        saveText.SetActive(false);
+    }
+
+    public void SaveButton()
+    {
+        SaveManager.Instance.Save();
+        saveText.SetActive(true);
     }
 
     public void PauseOpen()

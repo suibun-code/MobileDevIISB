@@ -38,7 +38,10 @@ public class GameManager : MonoBehaviour
 
     // win state (use for result scene)
     public bool isWin;
+    // player score
     public int score;
+    // player hp
+    public float pyramidHP;
 
     // Change scene
     public void ChangeScene(string sceneName)
