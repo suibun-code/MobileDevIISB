@@ -46,7 +46,13 @@ public class EnemyPooler : MonoBehaviour
     void Start()
     {
         poolDictionary = new Dictionary<string, Queue<GameObject>>();
+        SpawnEnemy();
 
+        // poolDictionary.Add(pool.tag, objectPool);
+    }
+
+    public void SpawnEnemy()
+    {
         foreach (Pool pool in pools)
         {
             Queue<GameObject> objectPool = new Queue<GameObject>();
@@ -78,8 +84,8 @@ public class EnemyPooler : MonoBehaviour
                 obj.SetActive(true);
                 objectPool.Enqueue(obj);
             }
-           // poolDictionary.Add(pool.tag, objectPool);
         }
+
     }
 
     public GameObject SpawnFromPool (string tag, Vector3 position, Quaternion rotation)
