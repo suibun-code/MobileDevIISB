@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ResultUI : MonoBehaviour
 {
@@ -28,5 +29,15 @@ public class ResultUI : MonoBehaviour
             loseImage.SetActive(true);
             resultText.text = "Game Over";
         }
+    }
+
+    public void OnRestartPressed()
+    {
+        GameManager.Instance.ChangeScene("GameScene");
+    }
+
+    public void OnMenuPressed()
+    {
+        GameManager.Instance.ChangeScene("MainMenu");
     }
 }

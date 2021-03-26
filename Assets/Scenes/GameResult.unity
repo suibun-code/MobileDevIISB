@@ -586,7 +586,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 895323207}
         m_TargetAssemblyTypeName: ResultUI, Assembly-CSharp
-        m_MethodName: MainmenuButton
+        m_MethodName: OnMenuPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1022,7 +1022,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 895323207}
         m_TargetAssemblyTypeName: ResultUI, Assembly-CSharp
-        m_MethodName: RestartButton
+        m_MethodName: OnRestartPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
