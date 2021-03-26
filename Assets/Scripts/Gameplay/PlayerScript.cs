@@ -58,6 +58,8 @@ public class PlayerScript : MonoBehaviour
 
             //StartCoroutine(LoadAsynSceneCoroutine());
         }
+
+        GameManager.Instance.pyramidHP = Health;
     }
 
     [Header("Scene")]

@@ -14,7 +14,7 @@ public class MainMenuUI : MonoBehaviour
 
     public void StartButton()
     {
-        GameManager.Instance.ChangeScene("Loading");
+        GameManager.Instance.ChangeScene("GameScene");
     }
 
     public void OptionWindowOpen()
@@ -44,7 +44,7 @@ public class MainMenuUI : MonoBehaviour
     public void LoadButton()
     {
         SaveManager.Instance.Load();
-        GameManager.Instance.ChangeScene("Loading");
+        GameManager.Instance.ChangeScene("GameScene");
     }
 
     public void QuitButton()

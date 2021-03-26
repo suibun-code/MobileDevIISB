@@ -11,13 +11,25 @@ public class LoadingUI : MonoBehaviour
     // scene name
     public string SceneName;
     //increse the time
-    private float time;
+    public float time;
 
     void Start()
     {
         loadingBar.fillAmount = 0.0f;
         StartCoroutine(LoadAsynSceneCoroutine());
     }
+
+    //void Update()
+    //{
+    //    time += Time.deltaTime;
+    //    loadingBar.fillAmount = time / 3f;
+
+    //    if (time > 3.0f)
+    //    {
+    //        time = 0;
+    //        GameManager.Instance.ChangeScene("GameScene");
+    //    }
+    //}
 
     IEnumerator LoadAsynSceneCoroutine()
     {
@@ -34,7 +46,7 @@ public class LoadingUI : MonoBehaviour
 
             loadingBar.fillAmount = time / 3f;
 
-            if (time > 5)
+            if (time > 3)
             {
                 operation.allowSceneActivation = true;
             }

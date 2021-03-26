@@ -4885,7 +4885,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isWin: 0
   score: 0
-  pyramidHP: 0
+  pyramidHP: 100
+  brick: 0
+  gold: 0
+  diamond: 0
 --- !u!4 &800964790
 Transform:
   m_ObjectHideFlags: 0

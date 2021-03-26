@@ -39,6 +39,9 @@ public class SaveManager : MonoBehaviour
     {
         PlayerPrefs.SetFloat("pyramidHP", GameManager.Instance.pyramidHP);
         PlayerPrefs.SetInt("score", GameManager.Instance.score);
+        PlayerPrefs.SetInt("brick", GameManager.Instance.brick);
+        PlayerPrefs.SetInt("gold", GameManager.Instance.gold);
+        PlayerPrefs.SetInt("diamond", GameManager.Instance.diamond);
 
         // save player resource
         // save enemy position and status
@@ -49,6 +52,9 @@ public class SaveManager : MonoBehaviour
     {
         GameManager.Instance.pyramidHP = PlayerPrefs.GetFloat("pyramidHP");
         GameManager.Instance.score = PlayerPrefs.GetInt("score");
+        GameManager.Instance.brick = PlayerPrefs.GetInt("brick");
+        GameManager.Instance.gold = PlayerPrefs.GetInt("gold");
+        GameManager.Instance.diamond = PlayerPrefs.GetInt("diamond");
 
         // load player resource
         // load enemy position and status

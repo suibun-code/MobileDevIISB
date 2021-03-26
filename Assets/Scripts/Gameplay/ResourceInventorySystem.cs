@@ -20,9 +20,9 @@ public class ResourceInventorySystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bricks = 0;
-        gold = 0;
-        diamond = 0;
+        bricks = GameManager.Instance.brick;
+        gold = GameManager.Instance.gold;
+        diamond = GameManager.Instance.diamond;
 
         cellSpt = GetComponent<Cell>();
     }
@@ -37,6 +37,10 @@ public class ResourceInventorySystem : MonoBehaviour
         CollectBricks();
         CollectGold();
         CollectDiamond();
+
+        GameManager.Instance.brick = bricks;
+        GameManager.Instance.gold = gold;
+        GameManager.Instance.diamond = diamond;
     }
 
     // functions to 1 items to your resource

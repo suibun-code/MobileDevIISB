@@ -30,9 +30,8 @@ public class EnemyHealth : MonoBehaviour
     void Start()
     {
         CamRef = GameObject.FindGameObjectWithTag("MainCamera");
-        Health = 100f;
+        Health = GameManager.Instance.pyramidHP;
 
-        
         
     }
 

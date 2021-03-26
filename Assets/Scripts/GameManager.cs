@@ -42,6 +42,12 @@ public class GameManager : MonoBehaviour
     public int score;
     // player hp
     public float pyramidHP;
+    // player hp
+    public int brick;
+    // player hp
+    public int gold;
+    // player hp
+    public int diamond;
 
     // Change scene
     public void ChangeScene(string sceneName)
