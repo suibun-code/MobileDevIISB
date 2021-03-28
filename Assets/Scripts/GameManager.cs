@@ -11,6 +11,10 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        brick = 40;
+        gold = 20;
+        diamond = 8;
+
         if (instance == null)
         {
             instance = this;
@@ -48,6 +52,8 @@ public class GameManager : MonoBehaviour
     public int gold;
     // player hp
     public int diamond;
+
+    
 
     // Change scene
     public void ChangeScene(string sceneName)

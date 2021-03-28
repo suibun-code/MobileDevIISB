@@ -2026,8 +2026,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "- Click on the cells on the grid to \n  place a tower.\n\n1 Key - Collect
-    Bricks\n2 Key - Collect Gold\n3 Key - Collect Diamonds\n"
+  m_Text: "- Use the Drag and Drop pannel  below. there are 4 knobs that repesent
+    each towers. \n\n- Drag the knob to a cell on the grid to build the towers.\n"
 --- !u!222 &929052850
 CanvasRenderer:
   m_ObjectHideFlags: 0
