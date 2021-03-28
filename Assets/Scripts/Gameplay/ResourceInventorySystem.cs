@@ -34,9 +34,9 @@ public class ResourceInventorySystem : MonoBehaviour
         goldCtr.text = "" + gold;
         diamondCtr.text = "" + diamond;
 
-        CollectBricks();
-        CollectGold();
-        CollectDiamond();
+        //CollectBricks();
+        //CollectGold();
+        //CollectDiamond();
 
         GameManager.Instance.brick = bricks;
         GameManager.Instance.gold = gold;
@@ -44,31 +44,31 @@ public class ResourceInventorySystem : MonoBehaviour
     }
 
     // functions to 1 items to your resource
-    void CollectBricks()
-    {
-        // bricks++;
-        if (Input.GetKeyUp(KeyCode.Alpha1) && bricks < 50) // press 1 key to add one brick
-        {
-            bricks++;
-        }
-    }
+    //void CollectBricks()
+    //{
+    //    // bricks++;
+    //    if (Input.GetKeyUp(KeyCode.Alpha1) && bricks < 50) // press 1 key to add one brick
+    //    {
+    //        bricks++;
+    //    }
+    //}
 
-    void CollectGold()
-    {
-        //gold++;
-        if (Input.GetKeyUp(KeyCode.Alpha2) && gold < 50) // press 2 key to add one gold
-        {
-            gold++;
-        }
-    }
+    //void CollectGold()
+    //{
+    //    //gold++;
+    //    if (Input.GetKeyUp(KeyCode.Alpha2) && gold < 50) // press 2 key to add one gold
+    //    {
+    //        gold++;
+    //    }
+    //}
 
-    void CollectDiamond() 
-    {
+    //void CollectDiamond() 
+    //{
 
-        //diamond++;
-        if (Input.GetKeyUp(KeyCode.Alpha3) & diamond < 50) // press 3 key to add one diamond
-        {
-            diamond++;
-        }
-    }
+    //    //diamond++;
+    //    if (Input.GetKeyUp(KeyCode.Alpha3) & diamond < 50) // press 3 key to add one diamond
+    //    {
+    //        diamond++;
+    //    }
+    //}
 }
