@@ -11,12 +11,41 @@ public class MainMenuUI : MonoBehaviour
     GameObject HowToPlayPanel;
     [SerializeField]
     GameObject CreditPanel;
+    [SerializeField]
+    Image sunImage;
+
+    [SerializeField]
+    private bool isLightUp;
+    [SerializeField]
+    private float alpha;
 
     public void StartButton()
     {
         GameManager.Instance.ChangeScene("GameScene");
+        alpha = 0.5f;
     }
+    void Update()
+    {
+        if(alpha > 0.7f)
+        {
+            isLightUp = false;
+        }
+        else if (alpha < 0.3f)
+        {
+            isLightUp = true;
+        }
 
+        if (isLightUp)
+        {
+            alpha += Time.deltaTime / 3;
+            sunImage.color = new Color(1, 1, 1, alpha);
+        }
+        else
+        {
+            alpha -= Time.deltaTime / 3;
+            sunImage.color = new Color(1, 1, 1, alpha);
+        }
+    }
     public void OptionWindowOpen()
     {
         optionPanel.SetActive(true);

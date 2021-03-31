@@ -45,7 +45,7 @@ public class WaveManager : MonoBehaviour
 
         // get break indicator UI
         BreakText = GameObject.FindGameObjectWithTag("PauseIndicator");
-        BreakText.SetActive(false);
+ 
     }
 
     void Update() {
