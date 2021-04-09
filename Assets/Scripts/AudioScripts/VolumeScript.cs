@@ -11,9 +11,17 @@ public class VolumeScript : MonoBehaviour
 
     float volumeSliderValue;
 
+    AudioSource audioSource;
+
+    float volume = 0.5f;
+
     void Update()
     {
         OnVolumeSliderChanged();
+
+        audioSource = GetComponent<AudioSource>();
+
+        audioSource.volume = PlayerPrefs.GetFloat("SliderVolumeLevel", audioSource.volume);
     }
 
     //public void VolumeController()
@@ -25,6 +33,11 @@ public class VolumeScript : MonoBehaviour
     public void OnVolumeSliderChanged()
     {
         AudioManager.volume = volumeSlider.value;
+    }
+
+    void SaveSliderValue()
+    {
+        PlayerPrefs.SetFloat("SliderVolumeLevel", volume);
     }
     //public Slider slider;
     //public AudioMixer mixer;

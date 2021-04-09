@@ -66,8 +66,8 @@ public class EnemyHealth : MonoBehaviour
         // reduce health and update healthbar length
         Health -= damage;
         HealthBarContainerRef.transform.localScale = new Vector3(1f * (Health / 100f), HealthBarContainerRef.transform.localScale.y, HealthBarContainerRef.transform.localScale.z);
+        AudioSource.PlayClipAtPoint(GenericDamageSFX, transform.position);
 
-        
 
         if (Health > 0)
         {
@@ -88,7 +88,7 @@ public class EnemyHealth : MonoBehaviour
             ResourceInventorySystem.gold += 2;
             ResourceInventorySystem.diamond += 1;
 
-            //AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
+            AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
 
             if (ResourceInventorySystem.bricks >= 10 && ResourceInventorySystem.gold >= 5 &&
                   ResourceInventorySystem.diamond >= 2)
