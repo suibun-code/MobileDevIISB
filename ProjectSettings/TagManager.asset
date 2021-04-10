@@ -16,6 +16,7 @@ TagManager:
   - Minutes
   - PauseIndicator
   - EnemySpawner
+  - WaveText
   layers:
   - Default
   - TransparentFX

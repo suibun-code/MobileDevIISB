@@ -51,14 +51,14 @@ public class EnemyHealth : MonoBehaviour
         //}
 
         // Roatate healthbar if its not parallel to canvas
-        if (transform.rotation != Quaternion.Euler(-45f, 90f, 0f))
-        {
-            transform.rotation = Quaternion.Euler(
-                -45f,
-                90f,
-                0f
-            );
-        }
+        // if (transform.rotation != Quaternion.Euler(-45f, 90f, 0f))
+        // {
+        //     transform.rotation = Quaternion.Euler(
+        //         -45f,
+        //         90f,
+        //         0f
+        //     );
+        // }
     }
 
     public bool TakeDamage(int damage)

@@ -1,5 +1,7 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class WaveManager : MonoBehaviour
 {
@@ -25,12 +27,13 @@ public class WaveManager : MonoBehaviour
 
     // wave spawned
     int TotalWave;
-
+    int SmallWave;
 
     // clock ui reference
     Text SecondsUI;
     Text MinutesUI;
     GameObject BreakText;
+    Text WaveText;
 
     // enemy spawner ref
     GameObject[] enemySpawner;
@@ -39,11 +42,13 @@ public class WaveManager : MonoBehaviour
     void Start()
     {
         isInWave = true;
-
+        TotalWave = 0;
+        SmallWave = 0;
 
         // get reference to UI text
         SecondsUI = GameObject.FindGameObjectWithTag("Seconds").GetComponent<Text>();
         MinutesUI = GameObject.FindGameObjectWithTag("Minutes").GetComponent<Text>();
+        WaveText = GameObject.FindGameObjectWithTag("WaveText").GetComponent<Text>();
         UpdateUIText();
 
         // get break indicator UI
@@ -53,17 +58,35 @@ public class WaveManager : MonoBehaviour
         enemySpawner = GameObject.FindGameObjectsWithTag("EnemySpawner");
 
 
+        // start clock
+        InvokeRepeating(nameof(ClockTick), 0, 1);
+
+        StartCoroutine(nameof(GameStart));
+
+
     }
 
-    void Update() {
-        
-        ClockTick();
-        WaveEvent();
-        
+    IEnumerator GameStart()
+    {
+        // BreakText.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(WaveEventInterval);
+        // start Wave Event
+        InvokeRepeating(nameof(WaveEvent), 0, WaveEventInterval);
+        BreakText.gameObject.SetActive(false);
+        TotalWave++;
+        UpdateUIText();
+
     }
 
 
+    void Update() 
+    {
 
+    }
+
+
+    // spawn enemy from all enemy spawner
     void SpawnEnemyForAllEnemySpawner()
     {
         foreach (var item in enemySpawner)
@@ -76,63 +99,58 @@ public class WaveManager : MonoBehaviour
 
     void ClockTick()
     {
-        if (Time.frameCount % 60 == 0)
+        // clock tick
+        Clock_Seconds++;
+        if (Clock_Seconds == 60)
         {
-            Clock_Seconds++;
-            if (Clock_Seconds == 60)
-            {
-                Clock_Minutes++;
-                Clock_Seconds = 0;
-            }
-            UpdateUIText();
-            // print(Clock_Minutes + " : " + Clock_Seconds);
+            Clock_Minutes++;
+            Clock_Seconds = 0;
         }
+        UpdateUIText();
+        // print(Clock_Minutes + " : " + Clock_Seconds);
     }
 
     void WaveEvent()
     {
-        if (Time.frameCount % (60*WaveEventInterval) == 0 && isInWave)
+        // // runs every x seconds if in wave
+        if (isInWave)
         {
-
-
-            // print("Run wave event");
+            print("Run wave event");
 
             // spawn enemy
             SpawnEnemyForAllEnemySpawner();
             
             // increment wave count
-            TotalWave++;
+            SmallWave++;
 
             // print(TotalWave);
             // take a break every 5 wave
-            if (TotalWave % 2 == 0)
+            if (SmallWave % 4 == 0 && isInWave)
             {
-                isInWave = false;
-                BreakText.gameObject.SetActive(true);
+                StartCoroutine(StartBreak());
+
             }
 
-        }
-
-
-        // if not in wave, take break
-        if (!isInWave)
-        {
-            if (Time.frameCount % 60 == 0)
-            {
-                int temp = GameObject.FindGameObjectsWithTag("Enemy").Length;
-
-                BreakTime--;
-                if (BreakTime <= 0 && temp <= 0)
-                {
-                    isInWave = true;
-                    BreakTime = 20;
-                    BreakText.SetActive(false);
-                }
-            }
         }
 
     }
     
+
+    IEnumerator StartBreak()
+    {
+        // go pause
+        isInWave = false;
+        BreakText.SetActive(true);
+
+        yield return new WaitForSeconds(16);
+        
+        TotalWave++;
+        // go in wave
+        BreakText.gameObject.SetActive(false);
+        isInWave = true;
+    }
+
+
 
     void UpdateUIText()
     {
@@ -154,5 +172,8 @@ public class WaveManager : MonoBehaviour
         {
             MinutesUI.text = Clock_Minutes.ToString();
         }
+
+        WaveText.text = TotalWave.ToString();
+
     }
 }

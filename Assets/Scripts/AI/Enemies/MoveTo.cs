@@ -21,7 +21,7 @@ public class MoveTo : MonoBehaviour
 
     public IEnumerator Freeze(float secondsToFreeze)
     {
-        Debug.Log("FREEZEEEEEEEE");
+        // Debug.Log("FREEZEEEEEEEE");
 
         float speed = agent.speed;
 

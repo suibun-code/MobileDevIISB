@@ -21,7 +21,7 @@ public class VolumeScript : MonoBehaviour
 
         audioSource = GetComponent<AudioSource>();
 
-        audioSource.volume = PlayerPrefs.GetFloat("SliderVolumeLevel", audioSource.volume);
+        // audioSource.volume = PlayerPrefs.GetFloat("SliderVolumeLevel", audioSource.volume);
     }
 
     //public void VolumeController()

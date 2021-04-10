@@ -59,27 +59,24 @@ public class EnemyPooler : MonoBehaviour
             for (int i = 0; i < 1; i++)
             {
                 int enemy = Random.Range(0, 3);
-                Debug.Log (enemy);
+                // Debug.Log (enemy);
                 switch (enemy)
                 {
                     case 0:
                         pool.e = Archer;
-                        Debug.Log(pool.e);
                         break;
                     case 1:
                         pool.e = Swordsmen;
-                        Debug.Log(pool.e);
                         break;
                     case 2:
                         pool.e = Wizard;
-                        Debug.Log(pool.e);
                         break;
                     case 3:
                         pool.e = Mummy;
-                        Debug.Log(pool.e);
                         break;
 
                 }
+                // Debug.Log(pool.e);
                 GameObject obj = Instantiate(pool.e, transform.position, Quaternion.identity);
                 obj.SetActive(true);
                 objectPool.Enqueue(obj);
