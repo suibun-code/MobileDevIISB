@@ -32,6 +32,9 @@ public class WaveManager : MonoBehaviour
     Text MinutesUI;
     GameObject BreakText;
 
+    // enemy spawner ref
+    GameObject[] enemySpawner;
+
 
     void Start()
     {
@@ -46,6 +49,10 @@ public class WaveManager : MonoBehaviour
         // get break indicator UI
         BreakText = GameObject.FindGameObjectWithTag("PauseIndicator");
  
+        // get enemy spawner
+        enemySpawner = GameObject.FindGameObjectsWithTag("EnemySpawner");
+
+
     }
 
     void Update() {
@@ -56,6 +63,14 @@ public class WaveManager : MonoBehaviour
     }
 
 
+
+    void SpawnEnemyForAllEnemySpawner()
+    {
+        foreach (var item in enemySpawner)
+        {
+            item.GetComponent<EnemyPooler>().SpawnEnemy();
+        }
+    }
 
 
 
@@ -83,7 +98,7 @@ public class WaveManager : MonoBehaviour
             // print("Run wave event");
 
             // spawn enemy
-            GetComponent<EnemyPooler>().SpawnEnemy();
+            SpawnEnemyForAllEnemySpawner();
             
             // increment wave count
             TotalWave++;

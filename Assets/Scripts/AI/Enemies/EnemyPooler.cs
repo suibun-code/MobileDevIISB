@@ -46,7 +46,7 @@ public class EnemyPooler : MonoBehaviour
     void Start()
     {
         poolDictionary = new Dictionary<string, Queue<GameObject>>();
-        SpawnEnemy();
+        // SpawnEnemy();
 
         // poolDictionary.Add(pool.tag, objectPool);
     }

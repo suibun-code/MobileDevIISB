@@ -63,14 +63,14 @@ public class EnemyHealth : MonoBehaviour
 
     public bool TakeDamage(int damage)
     {
-        // reduce health and update healthbar length
-        Health -= damage;
-        HealthBarContainerRef.transform.localScale = new Vector3(1f * (Health / 100f), HealthBarContainerRef.transform.localScale.y, HealthBarContainerRef.transform.localScale.z);
-        AudioSource.PlayClipAtPoint(GenericDamageSFX, transform.position);
 
 
         if (Health > 0)
         {
+            // reduce health and update healthbar length
+            Health -= damage;
+            HealthBarContainerRef.transform.localScale = new Vector3(1f * (Health / 100f), HealthBarContainerRef.transform.localScale.y, HealthBarContainerRef.transform.localScale.z);
+            AudioSource.PlayClipAtPoint(GenericDamageSFX, transform.position);
             // change health bar color along with current health
             if (Health <= 30)
                 gameObject.transform.Find("Container").transform.Find("HealthBar").GetComponent<Renderer>().material.SetColor("_Color", Color.red);

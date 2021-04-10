@@ -15,6 +15,7 @@ TagManager:
   - Seconds
   - Minutes
   - PauseIndicator
+  - EnemySpawner
   layers:
   - Default
   - TransparentFX
