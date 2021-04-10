@@ -84,8 +84,8 @@ public class EnemyHealth : MonoBehaviour
 
             // destroy enemy
             Destroy(EnemyRef);
-            ResourceInventorySystem.bricks += 5;
-            ResourceInventorySystem.gold += 2;
+            ResourceInventorySystem.bricks += 2;
+            ResourceInventorySystem.gold += 1;
             ResourceInventorySystem.diamond += 1;
 
             AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
