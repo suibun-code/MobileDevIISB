@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class WaveManager : MonoBehaviour
 {
-
+  
+   
 
     // 60 seconds = 1 minutes
     // when Clock_Seconds equals to 60 it resets it self to zero
@@ -45,6 +46,8 @@ public class WaveManager : MonoBehaviour
         TotalWave = 0;
         SmallWave = 0;
 
+        
+        
         // get reference to UI text
         SecondsUI = GameObject.FindGameObjectWithTag("Seconds").GetComponent<Text>();
         MinutesUI = GameObject.FindGameObjectWithTag("Minutes").GetComponent<Text>();
@@ -82,7 +85,7 @@ public class WaveManager : MonoBehaviour
 
     void Update() 
     {
-
+        
     }
 
 

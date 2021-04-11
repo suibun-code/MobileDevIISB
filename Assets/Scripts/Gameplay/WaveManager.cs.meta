@@ -3,7 +3,9 @@ guid: bcc6cc4dd84432c4e8d40e422bc764b0
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - waveStartSFX: {fileID: 8300000, guid: 4e8dec9b392ec194490d2c459c6bdfe0, type: 3}
+  - audio: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
