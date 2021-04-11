@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 9221853564759393470}
   - component: {fileID: -9045356071087917517}
   - component: {fileID: -7626081383661557212}
+  - component: {fileID: 2881461692190987922}
   m_Layer: 0
   m_Name: Archer
   m_TagString: Enemy
@@ -196,6 +197,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goal: {fileID: 5040037294473334730, guid: ff2adf39e49d29341a15e137233babb2, type: 3}
+--- !u!114 &2881461692190987922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7292684297461589926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51ed3c03a63cf9e4c95e0ff6c26c2b6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthBarContainerRef: {fileID: 7292684297461589926}
+  EnemyRef: {fileID: 7292684297461589926}
+  Health: 0
+  DestroyedSFX: {fileID: 8300000, guid: 14d3f0a425dbacf42800eff9de87899c, type: 3}
+  EnemyHitWithArrowSFX: {fileID: 8300000, guid: 1f61e1b39dde39a43a102903be1d1cee, type: 3}
+  EnemyHitWithMagicSFX: {fileID: 8300000, guid: bf17fcedcde04d8499278a632dcd13e7, type: 3}
+  EnemyHitWithPunchSFX: {fileID: 8300000, guid: 8a3b91f548352894993f6f27a82c6d6f, type: 3}
+  EnemyHitWithSwordSFX: {fileID: 8300000, guid: 995bc507646f92742933047f8fea4244, type: 3}
+  GenericDamageSFX: {fileID: 8300000, guid: 4b56377201c567e45b53f53724e0e26f, type: 3}
+  deathParticle: {fileID: 0}
+  maxHealth: 0
+  currentHealth: 0
 --- !u!1001 &319996929436395653
 PrefabInstance:
   m_ObjectHideFlags: 0
