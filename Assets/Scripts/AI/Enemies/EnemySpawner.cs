@@ -12,6 +12,6 @@ public class EnemySpawner : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        enemyPool.SpawnFromPool("enemy", transform.position, Quaternion.identity);
+        enemyPool.SpawnFromPool("Enemy", transform.position, Quaternion.identity);
     }
 }

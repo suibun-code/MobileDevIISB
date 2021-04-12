@@ -60,3 +60,5 @@ crashlytics-build.properties
 build.rar
 
 Assets/Scenes/tempPathScene.unity
+
+UserSettings/EditorUserSettings.asset
