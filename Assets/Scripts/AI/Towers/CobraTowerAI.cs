@@ -15,12 +15,10 @@ public class CobraTowerAI : MonoBehaviour
     private float timer;
     private LineRenderer lineRender;
 
-    [Header("Audio")]
-    //Audio
-    public AudioClip ShootingMagicSFX;
-    public AudioClip ShootingArrowSFX;
-    public AudioClip MeleeSwordSwingSFX;
-
+  
+    //audio
+    public AudioManagerScript ams;
+    public AudioClip ShootMagic;
     void Awake()
     {
         colliderRange = GetComponent<SphereCollider>();
@@ -90,8 +88,8 @@ public class CobraTowerAI : MonoBehaviour
     private void Shoot()
     {
         //audio
-        AudioSource.PlayClipAtPoint(ShootingArrowSFX, transform.position);
-
+        AudioSource.PlayClipAtPoint(ShootMagic, transform.position);
+        ams.ShootingMagicS.Play();
         Debug.Log("Shoot");
         Debug.Log(currentTargets.Count);
 

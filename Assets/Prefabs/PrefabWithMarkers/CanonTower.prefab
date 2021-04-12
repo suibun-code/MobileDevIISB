@@ -244,9 +244,8 @@ MonoBehaviour:
   sphereTransform: {fileID: 5453233638534562878}
   damage: 10
   shotCoolDown: 0.5
-  ShootingMagicSFX: {fileID: 8300000, guid: 8f3918b0e0561ff40aaa912f7ed16bb5, type: 3}
-  ShootingArrowSFX: {fileID: 8300000, guid: cf1b09edea8ce794496fbdc988eeff7a, type: 3}
-  MeleeSwordSwingSFX: {fileID: 8300000, guid: 27a5e00c79dafd54bb12c207daca4204, type: 3}
+  ams: {fileID: 0}
+  ShootMagic: {fileID: 8300000, guid: 8f3918b0e0561ff40aaa912f7ed16bb5, type: 3}
 --- !u!135 &6523488384324190985
 SphereCollider:
   m_ObjectHideFlags: 0

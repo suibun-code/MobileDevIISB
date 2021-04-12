@@ -3,7 +3,11 @@ guid: 7cebc2363fd8b744cb37b0705b0185f4
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - currentTarget: {instanceID: 0}
+  - sphereTransform: {instanceID: 0}
+  - ams: {instanceID: 0}
+  - ShootMagic: {fileID: 8300000, guid: 8f3918b0e0561ff40aaa912f7ed16bb5, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

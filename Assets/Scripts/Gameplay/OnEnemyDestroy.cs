@@ -13,11 +13,9 @@ public class OnEnemyDestroy : MonoBehaviour
 
     //Audio
     [Header("Audio")]
-    public AudioClip DestroyedSFX;
-    public AudioClip EnemyHitWithArrowSFX;
-    public AudioClip EnemyHitWithMagicSFX;
-    public AudioClip EnemyHitWithPunchSFX;
-    public AudioClip EnemyHitWithSwordSFX;
+    public AudioManagerScript ams;
+    public AudioClip Destroyed;
+    
 
     private void Start()
     {
@@ -33,7 +31,9 @@ public class OnEnemyDestroy : MonoBehaviour
         // ps.GainResource_Diamond(-10);
         // ps.GainResource_Bricks(10);
 
-        AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
+        //AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
+        ams.DestroyedS.Play();
+        AudioSource.PlayClipAtPoint(Destroyed, transform.position);
         Debug.Log("Enemy Destroyed");
     }
 }

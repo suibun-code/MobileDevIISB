@@ -12,13 +12,9 @@ public class EnemyHealth : MonoBehaviour
     public float Health;
 
     //audio
-    [Header("Audio")]
-    public AudioClip DestroyedSFX;
-    public AudioClip EnemyHitWithArrowSFX;
-    public AudioClip EnemyHitWithMagicSFX;
-    public AudioClip EnemyHitWithPunchSFX;
-    public AudioClip EnemyHitWithSwordSFX;
-    public AudioClip GenericDamageSFX;
+    public AudioManagerScript ams;
+    public AudioClip Destroyed;
+    public AudioClip EnemyDamage;
 
     // Particle
     [Header("Particle")]
@@ -32,6 +28,7 @@ public class EnemyHealth : MonoBehaviour
         CamRef = GameObject.FindGameObjectWithTag("MainCamera");
         Health = GameManager.Instance.pyramidHP;
 
+        ams.DestroyedS = GetComponent<AudioSource>();
         
     }
 
@@ -70,7 +67,9 @@ public class EnemyHealth : MonoBehaviour
             // reduce health and update healthbar length
             Health -= damage;
             HealthBarContainerRef.transform.localScale = new Vector3(1f * (Health / 100f), HealthBarContainerRef.transform.localScale.y, HealthBarContainerRef.transform.localScale.z);
-            AudioSource.PlayClipAtPoint(GenericDamageSFX, transform.position);
+            AudioSource.PlayClipAtPoint(EnemyDamage, transform.position);
+            ams.EnemyDamageS.Play();
+            AudioSource.PlayClipAtPoint(EnemyDamage, transform.position);
             // change health bar color along with current health
             if (Health <= 30)
                 gameObject.transform.Find("Container").transform.Find("HealthBar").GetComponent<Renderer>().material.SetColor("_Color", Color.red);
@@ -88,8 +87,8 @@ public class EnemyHealth : MonoBehaviour
             ResourceInventorySystem.gold += 1;
             ResourceInventorySystem.diamond += 1;
 
-            AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
-
+            AudioSource.PlayClipAtPoint(Destroyed, transform.position);
+            ams.DestroyedS.Play();
             if (ResourceInventorySystem.bricks >= 10 && ResourceInventorySystem.gold >= 5 &&
                   ResourceInventorySystem.diamond >= 2)
             {
@@ -101,9 +100,10 @@ public class EnemyHealth : MonoBehaviour
                 ToggleBoard.buildText.color = Color.red;
                 ToggleBoard.buildText.text = "Can not build.";
             }
-
+            ams.DestroyedS.Play();
+           // AudioSource.PlayClipAtPoint(Destroy, transform.position);
             return true; //enemy died
-        
+            
         }
 
         return false; //enemy still alive

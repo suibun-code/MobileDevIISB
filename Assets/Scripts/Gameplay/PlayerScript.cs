@@ -24,11 +24,10 @@ public class PlayerScript : MonoBehaviour
     //public Text BricksCountUI;
 
     //Audio
-    //[Header("Audio")]
-    public AudioClip SpendCurrencySFX;
-    public AudioClip UpgradeTowerSFX;
-    public AudioClip DestroyedSFX;
-    public AudioClip TakeDamageSFX;
+    [Header("Audio")]
+    public AudioManagerScript ams;
+    public AudioClip playerDamage;
+    public AudioClip Destroyed;
 
     EnemyPooler enemyPool;
 
@@ -96,8 +95,12 @@ public class PlayerScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-            AudioSource.PlayClipAtPoint(TakeDamageSFX, transform.position);
+            AudioSource.PlayClipAtPoint(playerDamage, transform.position);
+            ams.PlayerDamageS.Play();
+            
+
             Destroy(other.gameObject);
+
             //EnemyPooler.poolDictionary[Enemy].Enqueue(objectToSpawn);
 
             TakeDamage(10.0f);
@@ -139,13 +142,16 @@ public class PlayerScript : MonoBehaviour
     // Also updating the healthbar and trigger death event
     void TakeDamage(float damage)
     {
-        AudioSource.PlayClipAtPoint(TakeDamageSFX, transform.position);
-         Debug.Log("WHACK");
+        AudioSource.PlayClipAtPoint(playerDamage, transform.position);
+        ams.PlayerDamageS.Play();
+        Debug.Log("WHACK");
+
         if (Health > 0)
         {
             //audio
-           // AudioSource.PlayClipAtPoint(TakeDamageSFX, transform.position);
-            // Debug.Log("BOOM");
+            ams.PlayerDamageS.Play();
+            AudioSource.PlayClipAtPoint(playerDamage, transform.position);
+            Debug.Log("BOOM");
 
             // set health value 
             Health -= damage;
@@ -181,7 +187,8 @@ public class PlayerScript : MonoBehaviour
             if (Health <= 0)
             {
                 //audio
-                AudioSource.PlayClipAtPoint(DestroyedSFX, transform.position);
+                ams.DestroyedS.Play();
+                AudioSource.PlayClipAtPoint(Destroyed, transform.position);
                 Debug.Log("Player DESTROYED!");
             }
             else

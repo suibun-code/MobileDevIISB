@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: f36c4729c07025a44bc18753cb1dc32f
+guid: 55a0dc7b2c7efe54880868c06d3bcf52
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - board: {instanceID: 0}
-  - PlacingTowerSFX: {fileID: 8300000, guid: ce59aa0ebb5d15a43bf12356f37c2466, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

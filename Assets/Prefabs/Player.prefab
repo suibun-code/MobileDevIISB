@@ -453,10 +453,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthBarContainer: {fileID: 7116679294415389102}
   HealthBarIndicator: {fileID: 4336749589008240922}
-  SpendCurrencySFX: {fileID: 8300000, guid: 052417fb74ff5894bacdcd548ad6e9e5, type: 3}
-  UpgradeTowerSFX: {fileID: 8300000, guid: 4661c9e0b207ec24898d07108c8cc712, type: 3}
-  DestroyedSFX: {fileID: 8300000, guid: 14d3f0a425dbacf42800eff9de87899c, type: 3}
-  TakeDamageSFX: {fileID: 8300000, guid: 40d03d043cd200c439a5c0337cfd344a, type: 3}
+  ams: {fileID: 0}
+  playerDamage: {fileID: 8300000, guid: 40d03d043cd200c439a5c0337cfd344a, type: 3}
+  Destroyed: {fileID: 8300000, guid: 14d3f0a425dbacf42800eff9de87899c, type: 3}
   SceneName: GameResult
 --- !u!54 &2931001469924121824
 Rigidbody:
