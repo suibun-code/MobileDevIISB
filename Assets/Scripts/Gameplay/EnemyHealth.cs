@@ -29,7 +29,6 @@ public class EnemyHealth : MonoBehaviour
         Health = GameManager.Instance.pyramidHP;
 
         ams.DestroyedS = GetComponent<AudioSource>();
-        
     }
 
     void Update()

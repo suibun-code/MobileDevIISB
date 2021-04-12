@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8292862379244810190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8292862379244810184}
+  - component: {fileID: 8292862379244810185}
+  - component: {fileID: 8292862379244810186}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8292862379244810184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8292862379244810190}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -42.34066, y: -11.213638, z: -7.2490654}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8292862379244810185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8292862379244810190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72b0d52673b7c5540bc75337eefde198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 0}
+  AudioManager: {fileID: 0}
+  mixer: {fileID: 24100000, guid: 9fe7e89676e607b4db300832613a667c, type: 2}
+--- !u!114 &8292862379244810186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8292862379244810190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a0dc7b2c7efe54880868c06d3bcf52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioData: {fileID: 0}
+  ShootingMagicS: {fileID: 0}
+  ShootingArrowS: {fileID: 0}
+  MeleeSwordSwingS: {fileID: 0}
+  DestroyedS: {fileID: 0}
+  EnemyDamageS: {fileID: 0}
+  SpendCurrencyS: {fileID: 0}
+  UpgradeTowerS: {fileID: 0}
+  PlayerDamageS: {fileID: 0}
+  WaveStartS: {fileID: 0}
+  WaveCompleteS: {fileID: 0}
+  ShootingMagicC: {fileID: 8300000, guid: 8f3918b0e0561ff40aaa912f7ed16bb5, type: 3}
+  ShootingArrowC: {fileID: 8300000, guid: cf1b09edea8ce794496fbdc988eeff7a, type: 3}
+  MeleeSwordSwingC: {fileID: 8300000, guid: 27a5e00c79dafd54bb12c207daca4204, type: 3}
+  DestroyedC: {fileID: 8300000, guid: 14d3f0a425dbacf42800eff9de87899c, type: 3}
+  EnemyDamageC: {fileID: 8300000, guid: 4b56377201c567e45b53f53724e0e26f, type: 3}
+  SpendCurrencyC: {fileID: 8300000, guid: 052417fb74ff5894bacdcd548ad6e9e5, type: 3}
+  UpgradeTowerC: {fileID: 8300000, guid: 4661c9e0b207ec24898d07108c8cc712, type: 3}
+  PlayerDamageC: {fileID: 8300000, guid: 40d03d043cd200c439a5c0337cfd344a, type: 3}
+  WaveStartC: {fileID: 8300000, guid: 4e8dec9b392ec194490d2c459c6bdfe0, type: 3}
+  WaveCompleteC: {fileID: 8300000, guid: 6e96f2bd93e93c540bdf51e35e41295e, type: 3}
