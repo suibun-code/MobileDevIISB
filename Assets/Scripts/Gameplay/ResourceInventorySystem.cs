@@ -20,6 +20,7 @@ public class ResourceInventorySystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // use gamemanager data (singleton)
         bricks = GameManager.Instance.brick;
         gold = GameManager.Instance.gold;
         diamond = GameManager.Instance.diamond;

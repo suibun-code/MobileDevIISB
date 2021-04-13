@@ -42,6 +42,7 @@ public class SaveManager : MonoBehaviour
         PlayerPrefs.SetInt("brick", GameManager.Instance.brick);
         PlayerPrefs.SetInt("gold", GameManager.Instance.gold);
         PlayerPrefs.SetInt("diamond", GameManager.Instance.diamond);
+        PlayerPrefs.SetInt("waveNum", GameManager.Instance.waveNum);
 
         // save player resource
         // save enemy position and status
@@ -55,6 +56,7 @@ public class SaveManager : MonoBehaviour
         GameManager.Instance.brick = PlayerPrefs.GetInt("brick");
         GameManager.Instance.gold = PlayerPrefs.GetInt("gold");
         GameManager.Instance.diamond = PlayerPrefs.GetInt("diamond");
+        GameManager.Instance.waveNum = PlayerPrefs.GetInt("waveNum");
 
         // load player resource
         // load enemy position and status

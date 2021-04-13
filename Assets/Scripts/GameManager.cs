@@ -52,8 +52,9 @@ public class GameManager : MonoBehaviour
     public int gold;
     // player hp
     public int diamond;
+    // wave Number
+    public int waveNum;
 
-    
 
     // Change scene
     public void ChangeScene(string sceneName)

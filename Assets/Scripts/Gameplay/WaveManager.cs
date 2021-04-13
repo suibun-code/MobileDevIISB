@@ -43,7 +43,7 @@ public class WaveManager : MonoBehaviour
     void Start()
     {
         isInWave = true;
-        TotalWave = 0;
+        TotalWave = GameManager.Instance.waveNum;
         SmallWave = 0;
 
         
