@@ -100,7 +100,7 @@ public class EnemyHealth : MonoBehaviour
                 ToggleBoard.buildText.text = "Can not build.";
             }
             ams.DestroyedS.Play();
-           // AudioSource.PlayClipAtPoint(Destroy, transform.position);
+          AudioSource.PlayClipAtPoint(Destroyed, transform.position);
             return true; //enemy died
             
         }

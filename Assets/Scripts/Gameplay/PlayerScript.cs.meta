@@ -6,10 +6,9 @@ MonoImporter:
   defaultReferences:
   - HealthBarContainer: {fileID: 5040037294473334730, guid: 4eb36372dc94e0d4b9b3e45ebf005e30, type: 3}
   - HealthBarIndicator: {fileID: 5040037294473334730, guid: 4eb36372dc94e0d4b9b3e45ebf005e30, type: 3}
-  - SpendCurrencySFX: {fileID: 8300000, guid: 052417fb74ff5894bacdcd548ad6e9e5, type: 3}
-  - UpgradeTowerSFX: {fileID: 8300000, guid: 4661c9e0b207ec24898d07108c8cc712, type: 3}
-  - DestroyedSFX: {fileID: 8300000, guid: 14d3f0a425dbacf42800eff9de87899c, type: 3}
-  - TakeDamageSFX: {fileID: 8300000, guid: 40d03d043cd200c439a5c0337cfd344a, type: 3}
+  - ams: {instanceID: 0}
+  - playerDamage: {fileID: 8300000, guid: 4b56377201c567e45b53f53724e0e26f, type: 3}
+  - Destroyed: {fileID: 8300000, guid: 14d3f0a425dbacf42800eff9de87899c, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

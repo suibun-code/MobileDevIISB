@@ -4006,6 +4006,7 @@ MonoBehaviour:
   brick: 40
   gold: 20
   diamond: 8
+  waveNum: 0
 --- !u!4 &800964790
 Transform:
   m_ObjectHideFlags: 0
@@ -11773,6 +11774,10 @@ PrefabInstance:
       propertyPath: volumeSlider
       value: 
       objectReference: {fileID: 1549482220}
+    - target: {fileID: 8292862379244810186, guid: 51517da08c4db8a42b65c016cc35d805, type: 3}
+      propertyPath: AudioData
+      value: 
+      objectReference: {fileID: 717536479}
     - target: {fileID: 8292862379244810186, guid: 51517da08c4db8a42b65c016cc35d805, type: 3}
       propertyPath: DestroyedS
       value: 
