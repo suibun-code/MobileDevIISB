@@ -145,7 +145,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 8
-  m_Center: {x: 0, y: 0, z: 9}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &4405727506123842358
 NavMeshObstacle:
   m_ObjectHideFlags: 0

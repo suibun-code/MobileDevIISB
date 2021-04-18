@@ -33,35 +33,15 @@ public class EnemyHealth : MonoBehaviour
 
     void Update()
     {
-        //// test purpose
-        //if (Time.frameCount % 120 == 0)
-        //{
-        //    TakeDamage(2);
-        //    // AudioSource.PlayClipAtPoint(GenericDamageSFX, transform.position);
-        //    // Debug.Log("Enemy pew!");
-        
-
-        //if (currentHealth <= maxHealth)
-        //{
-        //    AudioSource.PlayClipAtPoint(GenericDamageSFX, transform.position);
-        //}
-
-        // Roatate healthbar if its not parallel to canvas
-        // if (transform.rotation != Quaternion.Euler(-45f, 90f, 0f))
-        // {
-        //     transform.rotation = Quaternion.Euler(
-        //         -45f,
-        //         90f,
-        //         0f
-        //     );
-        // }
+        if (Health <= 0)
+        {
+            Death();
+        }
     }
 
     public bool TakeDamage(int damage)
     {
-
-
-        if (Health > 0)
+        if (Health - damage > 0)
         {
             // reduce health and update healthbar length
             Health -= damage;
@@ -71,30 +51,43 @@ public class EnemyHealth : MonoBehaviour
             // AudioSource.PlayClipAtPoint(EnemyDamage, transform.position);
             // change health bar color along with current health
             if (Health <= 30)
+            {
                 gameObject.transform.Find("Container").transform.Find("HealthBar").GetComponent<Renderer>().material.SetColor("_Color", Color.red);
+
+            }
             else if (Health <= 60 && Health > 30)
+            {
                 gameObject.transform.Find("Container").transform.Find("HealthBar").GetComponent<Renderer>().material.SetColor("_Color", Color.yellow);
+            }
         }
         else
         {
-            // enemy destroy particle
-            Instantiate(deathParticle, EnemyRef.transform.position, Quaternion.identity);
 
-            // destroy enemy
-            Destroy(EnemyRef);
-            ResourceInventorySystem.bricks += 2;
-            ResourceInventorySystem.gold += 1;
-            ResourceInventorySystem.diamond += 1;
-
-            // AudioSource.PlayClipAtPoint(Destroyed, transform.position);
-            // ams.DestroyedS.Play();
-
-            // ams.DestroyedS.Play();
-            // AudioSource.PlayClipAtPoint(Destroyed, transform.position);
+            Death();
             return true; //enemy died
             
         }
 
         return false; //enemy still alive
+    }
+
+
+
+    public void Death()
+    {
+        // enemy destroy particle
+        Instantiate(deathParticle, EnemyRef.transform.position, Quaternion.identity);
+
+        // destroy enemy
+        Destroy(EnemyRef);
+        ResourceInventorySystem.bricks += 2;
+        ResourceInventorySystem.gold += 1;
+        ResourceInventorySystem.diamond += 1;
+
+        // AudioSource.PlayClipAtPoint(Destroyed, transform.position);
+        // ams.DestroyedS.Play();
+
+        // ams.DestroyedS.Play();
+        // AudioSource.PlayClipAtPoint(Destroyed, transform.position);
     }
 }
