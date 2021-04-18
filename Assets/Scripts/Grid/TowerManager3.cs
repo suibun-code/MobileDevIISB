@@ -66,14 +66,7 @@ public class TowerManager3 : MonoBehaviour
         //audio
         AudioSource.PlayClipAtPoint(PlacingTowerSFX, transform.position);
 
-        if (!(ResourceInventorySystem.bricks >= 10 && ResourceInventorySystem.gold >= 5 &&
-           ResourceInventorySystem.diamond >= 2))
-        {
-            Debug.Log("Ran out of resources! Can not make more towers.");
 
-            ToggleBoard.buildText.color = Color.red;
-            ToggleBoard.buildText.text = "Can not build.";
-        }
     }
 
     public void SetTowerToBuild(int nextTower)

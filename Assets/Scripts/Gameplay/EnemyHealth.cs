@@ -66,9 +66,9 @@ public class EnemyHealth : MonoBehaviour
             // reduce health and update healthbar length
             Health -= damage;
             HealthBarContainerRef.transform.localScale = new Vector3(1f * (Health / 100f), HealthBarContainerRef.transform.localScale.y, HealthBarContainerRef.transform.localScale.z);
-            AudioSource.PlayClipAtPoint(EnemyDamage, transform.position);
-            ams.EnemyDamageS.Play();
-            AudioSource.PlayClipAtPoint(EnemyDamage, transform.position);
+            // AudioSource.PlayClipAtPoint(EnemyDamage, transform.position);
+            // ams.EnemyDamageS.Play();
+            // AudioSource.PlayClipAtPoint(EnemyDamage, transform.position);
             // change health bar color along with current health
             if (Health <= 30)
                 gameObject.transform.Find("Container").transform.Find("HealthBar").GetComponent<Renderer>().material.SetColor("_Color", Color.red);
@@ -86,21 +86,11 @@ public class EnemyHealth : MonoBehaviour
             ResourceInventorySystem.gold += 1;
             ResourceInventorySystem.diamond += 1;
 
-            AudioSource.PlayClipAtPoint(Destroyed, transform.position);
-            ams.DestroyedS.Play();
-            if (ResourceInventorySystem.bricks >= 10 && ResourceInventorySystem.gold >= 5 &&
-                  ResourceInventorySystem.diamond >= 2)
-            {
-                ToggleBoard.buildText.color = Color.green;
-                ToggleBoard.buildText.text = "Can build.";
-            }
-            else
-            {
-                ToggleBoard.buildText.color = Color.red;
-                ToggleBoard.buildText.text = "Can not build.";
-            }
-            ams.DestroyedS.Play();
-          AudioSource.PlayClipAtPoint(Destroyed, transform.position);
+            // AudioSource.PlayClipAtPoint(Destroyed, transform.position);
+            // ams.DestroyedS.Play();
+
+            // ams.DestroyedS.Play();
+            // AudioSource.PlayClipAtPoint(Destroyed, transform.position);
             return true; //enemy died
             
         }

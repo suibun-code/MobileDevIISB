@@ -88,7 +88,7 @@ public class SniperTowerAI : MonoBehaviour
     {
         //audio
         AudioSource.PlayClipAtPoint(ShootMagic, transform.position);
-        ams.ShootingMagicS.Play();
+        // ams.ShootingMagicS.Play();
         Debug.Log("Shoot");
 
         currentTarget.transform.Find("EnemyHealthBar").GetComponent<EnemyHealth>().TakeDamage(damage);

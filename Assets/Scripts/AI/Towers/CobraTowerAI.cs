@@ -89,7 +89,7 @@ public class CobraTowerAI : MonoBehaviour
     {
         //audio
         AudioSource.PlayClipAtPoint(ShootMagic, transform.position);
-        ams.ShootingMagicS.Play();
+        // ams.ShootingMagicS.Play();
         Debug.Log("Shoot");
         Debug.Log(currentTargets.Count);
 

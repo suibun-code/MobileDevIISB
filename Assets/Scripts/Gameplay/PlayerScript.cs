@@ -144,14 +144,14 @@ public class PlayerScript : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(playerDamage, transform.position);
         ams.PlayerDamageS.Play();
-        Debug.Log("WHACK");
+        // Debug.Log("WHACK");
 
         if (Health > 0)
         {
             //audio
             ams.PlayerDamageS.Play();
             AudioSource.PlayClipAtPoint(playerDamage, transform.position);
-            Debug.Log("BOOM");
+            // Debug.Log("BOOM");
 
             // set health value 
             Health -= damage;
@@ -189,7 +189,7 @@ public class PlayerScript : MonoBehaviour
                 //audio
                 ams.DestroyedS.Play();
                 AudioSource.PlayClipAtPoint(Destroyed, transform.position);
-                Debug.Log("Player DESTROYED!");
+                // Debug.Log("Player DESTROYED!");
             }
             else
             {

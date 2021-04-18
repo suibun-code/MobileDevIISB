@@ -63,13 +63,13 @@ public class EnemyPooler : MonoBehaviour
                 switch (enemy)
                 {
                     case 0:
-                        pool.e = Archer;
+                        pool.e = Mummy;
                         break;
                     case 1:
-                        pool.e = Swordsmen;
+                        pool.e = Mummy;
                         break;
                     case 2:
-                        pool.e = Wizard;
+                        pool.e = Mummy;
                         break;
                     case 3:
                         pool.e = Mummy;

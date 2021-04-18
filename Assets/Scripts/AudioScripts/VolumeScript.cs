@@ -32,6 +32,9 @@ public class VolumeScript : MonoBehaviour
 
     public void OnVolumeSliderChanged()
     {
+        if (!AudioManager)return;
+        if (!volumeSlider)return;
+
         AudioManager.volume = volumeSlider.value;
     }
 

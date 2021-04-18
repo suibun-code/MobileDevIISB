@@ -104,7 +104,7 @@ public class DragAndDropIcon : MonoBehaviour, IPointerDownHandler, IBeginDragHan
     {
         if (Available)
         {
-            print("Enddrag");
+            // print("Enddrag");
 
             // reset icon position
             rectTransform.anchoredPosition = StartAnchoredPosition;
@@ -118,7 +118,7 @@ public class DragAndDropIcon : MonoBehaviour, IPointerDownHandler, IBeginDragHan
                 {
                     // print("hit");
                     // print(hit.transform.gameObject.transform.position);
-                    print(hit.transform.gameObject.tag);
+                    // print(hit.transform.gameObject.tag);
 
 
                     // get cell
