@@ -1073,7 +1073,7 @@ PrefabInstance:
       objectReference: {fileID: 7292684297461589926, guid: 590ca2fce00d33047804b819353ef5f5, type: 3}
     - target: {fileID: 3833142787077460406, guid: fb9e7ae7802379b4f97fba4e193f7b8d, type: 3}
       propertyPath: pools.Array.size
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4762351588885542229, guid: fb9e7ae7802379b4f97fba4e193f7b8d, type: 3}
       propertyPath: m_RootOrder
@@ -2012,7 +2012,7 @@ GameObject:
   - component: {fileID: 663586894}
   m_Layer: 0
   m_Name: WaveManager
-  m_TagString: Untagged
+  m_TagString: WaveManager
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2043,6 +2043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcc6cc4dd84432c4e8d40e422bc764b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TotalWave: 0
 --- !u!4 &671044533 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 007e37668b725c6468fc25c57b360695, type: 3}
@@ -2270,7 +2271,7 @@ PrefabInstance:
       objectReference: {fileID: 7292684297461589926, guid: 590ca2fce00d33047804b819353ef5f5, type: 3}
     - target: {fileID: 3833142787077460406, guid: fb9e7ae7802379b4f97fba4e193f7b8d, type: 3}
       propertyPath: pools.Array.size
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4762351588885542229, guid: fb9e7ae7802379b4f97fba4e193f7b8d, type: 3}
       propertyPath: m_RootOrder

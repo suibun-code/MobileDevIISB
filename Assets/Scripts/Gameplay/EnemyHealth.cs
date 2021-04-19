@@ -9,7 +9,8 @@ public class EnemyHealth : MonoBehaviour
     public GameObject EnemyRef;
     GameObject CamRef;
 
-    public float Health;
+    float spawnHealth;
+    float Health;
 
     //audio
     public AudioManagerScript ams;
@@ -20,23 +21,45 @@ public class EnemyHealth : MonoBehaviour
     [Header("Particle")]
     public GameObject deathParticle;
 
-    public float maxHealth;
-    public float currentHealth;
-
     void Start()
     {
         CamRef = GameObject.FindGameObjectWithTag("MainCamera");
-        Health = GameManager.Instance.pyramidHP;
 
+        // as wave increase, enemy size and health should increase
+        var currWave = GameObject.FindGameObjectWithTag("WaveManager").GetComponent<WaveManager>().TotalWave;
+        
+        // print(currWave);
+        if (currWave < 2)
+        {
+            // EnemyRef.transform.localScale = new Vector3(1,1,1);
+            Health = 100.0f;
+            
+        }
+        else if (currWave % 5 == 0)
+        {
+            EnemyRef.transform.localScale = new Vector3(4,4,4);
+            transform.localScale = new Vector3(0.5f,0.5f,0.5f);
+            Health = 100.0f * currWave;
+        }
+        else
+        {
+            EnemyRef.transform.localScale = new Vector3(2,2,2);
+            transform.localScale = new Vector3(0.5f,0.5f,0.5f);
+            Health = 100.0f * currWave / 2;
+        }
+
+        spawnHealth = Health;
+     
+     
         ams.DestroyedS = GetComponent<AudioSource>();
     }
 
     void Update()
     {
-        if (Health <= 0)
-        {
-            Death();
-        }
+        // if (Health <= 0)
+        // {
+        //     Death();
+        // }
     }
 
     public bool TakeDamage(int damage)
@@ -45,7 +68,7 @@ public class EnemyHealth : MonoBehaviour
         {
             // reduce health and update healthbar length
             Health -= damage;
-            HealthBarContainerRef.transform.localScale = new Vector3(1f * (Health / 100f), HealthBarContainerRef.transform.localScale.y, HealthBarContainerRef.transform.localScale.z);
+            HealthBarContainerRef.transform.localScale = new Vector3(1f * (Health / spawnHealth), HealthBarContainerRef.transform.localScale.y, HealthBarContainerRef.transform.localScale.z);
             // AudioSource.PlayClipAtPoint(EnemyDamage, transform.position);
             // ams.EnemyDamageS.Play();
             // AudioSource.PlayClipAtPoint(EnemyDamage, transform.position);

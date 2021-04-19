@@ -11,6 +11,9 @@ public class EnemyPooler : MonoBehaviour
     public GameObject Mummy;
     //public GameObject e;
     //public GameObject enemy;
+
+
+
     enum eEnemies
     {
         Archer,
@@ -37,9 +40,9 @@ public class EnemyPooler : MonoBehaviour
 
     public Dictionary<string, Queue<GameObject>> poolDictionary;
 
-    int enemy0 = (int)eEnemies.Archer;
-    int enemy1 = (int)eEnemies.Swordsmen;
-    int enemy2 = (int)eEnemies.Wizard;
+    // int enemy0 = (int)eEnemies.Archer;
+    // // int enemy1 = (int)eEnemies.Swordsmen;
+    // // int enemy2 = (int)eEnemies.Wizard;
     int enemy3 = (int)eEnemies.Mummy;
 
     // Start is called before the first frame update
@@ -74,10 +77,13 @@ public class EnemyPooler : MonoBehaviour
                     case 3:
                         pool.e = Mummy;
                         break;
-
                 }
+
+
+
                 // Debug.Log(pool.e);
                 GameObject obj = Instantiate(pool.e, transform.position, Quaternion.identity);
+
                 obj.SetActive(true);
                 objectPool.Enqueue(obj);
             }

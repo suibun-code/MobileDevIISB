@@ -17,6 +17,7 @@ TagManager:
   - PauseIndicator
   - EnemySpawner
   - WaveText
+  - WaveManager
   layers:
   - Default
   - TransparentFX

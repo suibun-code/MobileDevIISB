@@ -27,7 +27,7 @@ public class WaveManager : MonoBehaviour
 
 
     // wave spawned
-    int TotalWave;
+    public int TotalWave;
     int SmallWave;
 
     // clock ui reference
